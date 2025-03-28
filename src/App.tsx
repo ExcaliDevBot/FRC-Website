@@ -353,12 +353,14 @@ function App() {
                     transition={{duration: 1}}
                 >
                     <div className="container mx-auto px-4">
-                        <div className="flex flex-col md:flex-row justify-between items-center">
+                        <div className="flex flex-col md:flex-row justify-between items-center mb-4">
                             <div className="mb-4 md:mb-0">
                                 <img src='/Logo-Transparent.png' alt="Team Logo" className="h-12 w-12"/>
                             </div>
                             <div className="text-center md:text-left">
                                 <p>&copy; 2025 Team Excalibur #6738. All rights reserved.</p>
+                                <p className="text-gray-400">Dedicated to inspiring innovation and fostering engineering
+                                    excellence.</p>
                             </div>
                             <div className="flex space-x-4">
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
@@ -377,6 +379,19 @@ function App() {
                                    className="text-gray-400 hover:text-white transition">
                                     <Twitter className="h-6 w-6"/>
                                 </a>
+                            </div>
+                        </div>
+                        <div className="flex flex-col md:flex-row justify-between items-center">
+                            <div className="text-center md:text-left">
+                                <p className="text-gray-400 font-bold">Contact us</p>
+                                <p className="text-gray-400">excaliburfrc@gmail.com</p>
+                                <p className="text-gray-400">Address: 4 Reuven Street, Modi'in, Israel</p>
+                            </div>
+                            <div className="flex space-x-4">
+                                <a href="/privacy-policy" className="text-gray-400 hover:text-white transition">Privacy
+                                    Policy</a>
+                                <a href="/terms-of-service" className="text-gray-400 hover:text-white transition">Terms
+                                    of Service</a>
                             </div>
                         </div>
                     </div>
