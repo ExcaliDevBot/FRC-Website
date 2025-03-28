@@ -96,25 +96,26 @@ function App() {
                 >
                     <div className="absolute inset-0">
                         <div
-                            className="absolute inset-0 bg-[url('/robot.jpg')] bg-[length:50%] bg-right bg-no-repeat mix-blend-overlay"></div>
+                            className="absolute inset-0 bg-[url('/robot.jpg')] bg-cover bg-center mix-blend-overlay bg-top"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-team-blue/70 to-team-blue/10"></div>
                     </div>
-                    <div className="relative">
-                        <div className="container mx-auto px-4 py-16 md:py-32">
+                    <div className="relative z-10">
+                        <div className="container mx-auto px-4 py-16 md:py-32 text-center md:text-left">
                             <motion.div
-                                className="max-w-4xl"
+                                className="max-w-4xl mx-auto"
                                 initial={{y: -50, opacity: 0}}
                                 animate={heroInView ? {y: 0, opacity: 1} : {}}
                                 transition={{duration: 1}}
                             >
-                                <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white">
-                                    Forging the Future
-                                    <span className="text-team-gold block mt-4">of Robotics</span>
+                                <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white leading-tight">
+                                    We Are Team <span className="text-team-gold block mt-4">Excalibur FRC</span>
                                 </h1>
-                                <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl leading-relaxed">
-                                    Team Excalibur #6738 is a competitive FIRST Robotics team dedicated to inspiring
-                                    innovation and fostering engineering excellence through teamwork and determination.
+                                <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl leading-relaxed mx-auto">
+                                    We are from Modi'in, Israel, building the future and striving for excellence in
+                                    engineering and innovation.
                                 </p>
-                                <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                                <div
+                                    className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center md:justify-start">
                                     <motion.button
                                         onClick={openModal}
                                         className="bg-team-gold text-team-blue px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition flex items-center justify-center"
@@ -347,7 +348,7 @@ function App() {
 
                 {/* Footer */}
                 <motion.footer
-                    className="bg-gray-800 text-white py-8"
+                    className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 text-white py-8"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 1}}
@@ -364,19 +365,19 @@ function App() {
                             </div>
                             <div className="flex space-x-4">
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-                                   className="text-gray-400 hover:text-white transition">
+                                   className="text-gray-400 hover:text-white transition transform hover:scale-110">
                                     <Facebook className="h-6 w-6"/>
                                 </a>
                                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                                   className="text-gray-400 hover:text-white transition">
+                                   className="text-gray-400 hover:text-white transition transform hover:scale-110">
                                     <Instagram className="h-6 w-6"/>
                                 </a>
                                 <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
-                                   className="text-gray-400 hover:text-white transition">
+                                   className="text-gray-400 hover:text-white transition transform hover:scale-110">
                                     <Youtube className="h-6 w-6"/>
                                 </a>
                                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
-                                   className="text-gray-400 hover:text-white transition">
+                                   className="text-gray-400 hover:text-white transition transform hover:scale-110">
                                     <Twitter className="h-6 w-6"/>
                                 </a>
                             </div>
@@ -388,9 +389,11 @@ function App() {
                                 <p className="text-gray-400">Address: 4 Reuven Street, Modi'in, Israel</p>
                             </div>
                             <div className="flex space-x-4">
-                                <a href="/privacy-policy" className="text-gray-400 hover:text-white transition">Privacy
+                                <a href="/privacy-policy"
+                                   className="text-gray-400 hover:text-white transition transform hover:scale-110">Privacy
                                     Policy</a>
-                                <a href="/terms-of-service" className="text-gray-400 hover:text-white transition">Terms
+                                <a href="/terms-of-service"
+                                   className="text-gray-400 hover:text-white transition transform hover:scale-110">Terms
                                     of Service</a>
                             </div>
                         </div>
