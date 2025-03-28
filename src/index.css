@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.custom-background {
+    background: linear-gradient(to bottom, #F5E565, #0083AE, #0083AE, #000000);
+    border-radius: 10px; /* Adjust the radius as needed */
+    padding: 18px; /* Adjust the padding as needed */
+}
