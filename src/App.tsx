@@ -155,7 +155,7 @@ function App() {
                             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
                             <p className="mb-4">For more information, please reach out to us at:</p>
                             <p className="mb-2"><strong>Email:</strong> excaliburfrc@gmail.com</p>
-                            <p className="mb-2"><strong>Phone:</strong> +972 50-5588308</p>
+                            <p className="mb-2"><strong>Phone:</strong> +972 50-3229870</p>
                             <p className="mb-4"><strong>Address:</strong> 4 Reuven Street, Modi'in, Israel</p>
                             <button onClick={closeModal}
                                     className="bg-team-blue text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition">Close
@@ -171,13 +171,16 @@ function App() {
                     animate={{opacity: 1}}
                     transition={{duration: 1}}
                 >
+
                     <div className="container mx-auto px-4">
-                        <div
-                            className="inline-block bg-team-gold text-white px-3 py-1 rounded-full text-sm font-semibold ">
-                            Current Season
-                        </div>
+
                         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+
                             <div className="md:w-1/2">
+                                <div
+                                    className="inline-block bg-team-gold text-white px-3 py-1 rounded-full text-sm font-semibold mb-5">
+                                    Current Season
+                                </div>
                                 <h2 className="text-4xl font-bold text-team-blue mb-6">2025 Season - Reefscape</h2>
                                 <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                                     This season, we're taking on the FIRST Robotics Competition challenge "REEFSCAPE".
