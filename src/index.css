@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'Copperplate';
+    src: local('Copperplate'), local('Copperplate Gothic Bold'), local('Copperplate Gothic Light');
+}
+
+.text-copperplate {
+    font-family: 'Copperplate', serif;
+    font-weight: bold;
+}
 
 body {
   font-family: 'Inter', sans-serif;
