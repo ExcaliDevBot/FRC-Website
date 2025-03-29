@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
-// import TeamPage from './pages/TeamPage';
+import TeamPage from './TeamPage';
 // import ContactPage from './pages/ContactPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -19,7 +19,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
-                {/*<Route path="/team" element={<TeamPage />} />*/}
+                <Route path="/team" element={<TeamPage />} />
                 {/*<Route path="/sponsors" element={<SponsorsPage />} />*/}
                 {/*<Route path="/contact" element={<ContactPage />} />*/}
             </Routes>
