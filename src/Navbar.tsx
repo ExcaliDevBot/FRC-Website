@@ -17,8 +17,9 @@ const Navbar: React.FC = () => {
         >
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                    <img src="/Logo-Transparent.png" alt="Team Logo" className="h-12 w-12" />
-                    <span className="text-2xl font-bold text-team-blue">Excalibur #6738</span>
+                    <Link to="/">
+                        <img src="/Logo-Transparent.png" alt="Team Logo" className="h-12 w-12 hover:opacity-80 transition-opacity" />
+                    </Link>
                 </div>
                 <div className="md:hidden">
                     <button onClick={toggleNav} className="text-gray-600 hover:text-team-blue transition">
