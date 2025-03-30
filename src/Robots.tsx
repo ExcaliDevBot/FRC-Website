@@ -22,9 +22,9 @@ function Robots() {
       game: "Crecsendo",
       image: "/iron-sword.jpeg",
       features: [
-        { name: "Hybrid Gripper", icon: <Tool className="h-5 w-5" /> },
+        { name: "Hybrid Intake", icon: <Tool className="h-5 w-5" /> },
         { name: "Auto-Balance", icon: <Shield className="h-5 w-5" /> },
-        { name: "Multi-Cone Stack", icon: <Sparkles className="h-5 w-5" /> }
+        { name: "Durable Climb", icon: <Sparkles className="h-5 w-5" /> }
       ],
       achievements: ["ISR1 Industrial design Award","ISR3 Excellence in Engeering Award", "ISCMP Industrial Design Award"],
       description: "A versatile robot designed for both cone and cube game pieces, featuring advanced autonomous capabilities."
