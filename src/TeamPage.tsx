@@ -56,26 +56,26 @@ function TeamPage() {
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 bg-gradient-to-r from-team-blue to-blue-900 opacity-90"></div>
                     <div
-                        className="absolute inset-0 bg-[url('/excalibur_team_photo.jpeg')] bg-cover bg-fixed bg-center mix-blend-overlay"></div>
+                        className="absolute inset-0 bg-[url('/DCMP-EI.jpg')] bg-fixed bg-center mix-blend-overlay"></div>
                 </div>
                 <div className="relative h-full flex items-center">
                     <div className="container mx-auto px-4">
-                        <div className="max-w-4xl">
-                            <h1 className="text-7xl font-bold text-white mb-8">
+                        <div className="max-w-4xl text-center md:text-left">
+                            <h1 className="text-4xl md:text-7xl font-bold text-white mb-4 md:mb-8">
                                 Meet Our Team
-                                <span className="text-team-gold block mt-6">The People Behind Excalibur</span>
+                                <span className="text-team-gold block mt-4 md:mt-6">The People Behind Excalibur</span>
                             </h1>
-                            <p className="text-2xl text-gray-200 leading-relaxed mb-12 max-w-3xl">
+                            <p className="text-lg md:text-2xl text-gray-200 leading-relaxed mb-6 md:mb-12 max-w-3xl mx-auto md:mx-0">
                                 A diverse group of passionate students and mentors working together to
                                 for robotics and engineering excellence, and also for Good Times:)
                             </p>
-                            <div className="flex space-x-6">
+                            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
                                 <button
-                                    className="bg-team-gold text-team-blue px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition text-lg">
+                                    className="bg-team-gold text-team-blue px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-opacity-90 transition text-lg">
                                     Join Our Team
                                 </button>
                                 <button
-                                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-team-blue transition text-lg">
+                                    className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-team-blue transition text-lg">
                                     Learn More
                                 </button>
                             </div>
@@ -85,30 +85,19 @@ function TeamPage() {
             </div>
 
             {/* Leadership Section */}
-            <div className="py-24 bg-gradient-to-b from-gray-50 to-white">
+            <div className="py-12 bg-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-4xl font-bold text-team-blue text-center mb-16">Leadership Team</h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <h2 className="text-3xl font-bold text-center mb-8">Leadership Team</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {leadership.map((leader, index) => (
-                            <div key={index}
-                                 className="group relative flex flex-col items-center bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:scale-105">
-
-                                {/* Text */}
-                                <div className="relative z-10 text-center">
-                                    <h3 className="text-xl font-semibold text-team-blue mb-2">{leader.name}</h3>
-                                    <p className="text-team-gold font-medium mb-2">{leader.role}</p>
-                                </div>
-
-                                {/* Hover effect */}
-                                <div
-                                    className="absolute inset-0 bg-gradient-to-r from-team-blue/5 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div key={index} className="flex flex-col items-center p-4 border rounded-lg">
+                                <h3 className="text-lg font-semibold mb-1">{leader.name}</h3>
+                                <p className="text-gray-600">{leader.role}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-
-
             {/* Mentors Section */}
             <div className="py-24 bg-gray-50">
                 <div className="container mx-auto px-4">

@@ -5,6 +5,9 @@ import { useInView } from 'react-intersection-observer';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import TeamPage from './TeamPage';
+import Robots from "./Robots.tsx";
+import TermsOfService from './Terms.tsx';
+import PrivacyPolicy from './Privacy.tsx';
 // import ContactPage from './pages/ContactPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -20,6 +23,10 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/team" element={<TeamPage />} />
+                <Route path="/robots" element={<Robots />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/robots" element={<Robots />} />
                 {/*<Route path="/sponsors" element={<SponsorsPage />} />*/}
                 {/*<Route path="/contact" element={<ContactPage />} />*/}
             </Routes>
