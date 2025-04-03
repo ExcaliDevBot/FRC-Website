@@ -56,7 +56,7 @@ function TeamPage() {
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 bg-gradient-to-r from-team-blue to-blue-900 opacity-90"></div>
                     <div
-                        className="absolute inset-0 bg-[url('/DCMP-EI.jpg')] bg-fixed bg-center mix-blend-overlay"></div>
+                        className="absolute inset-0 bg-[url('img/DCMP-EI.jpg')] bg-fixed bg-center mix-blend-overlay"></div>
                 </div>
                 <div className="relative h-full flex items-center">
                     <div className="container mx-auto px-4">

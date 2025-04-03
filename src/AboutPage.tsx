@@ -8,7 +8,7 @@ function AboutPage() {
       <div className="relative h-[60vh] bg-team-blue overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-team-blue to-blue-900 opacity-90"></div>
-<div className="absolute inset-0 bg-[url('/prizes.jpeg')] bg-cover bg-center mix-blend-overlay"></div>        </div>
+<div className="absolute inset-0 bg-[url('img/prizes.jpeg')] bg-cover bg-center mix-blend-overlay"></div>        </div>
         <div className="relative h-full flex items-center">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl">
@@ -137,7 +137,7 @@ function AboutPage() {
               </div>
               <div className="relative h-full min-h-[400px]">
                 <img
-                  src="/team-image.jpg"
+                  src="/img/team-image.jpg"
                   alt="Team Impact"
                   className="absolute inset-0 w-full h-full object-cover"
                 />

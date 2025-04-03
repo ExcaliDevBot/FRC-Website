@@ -7,7 +7,7 @@ function Robots() {
       year: 2025,
       name: "Percival",
       game: "Reefscape",
-      image: "/robot.jpg",
+      image: "img/robot.jpg",
       features: [
         { name: "Advanced Vision System", icon: <Cpu className="h-5 w-5" /> },
         { name: "Rapid Coral Scoring", icon: <Zap className="h-5 w-5" /> },
@@ -20,7 +20,7 @@ function Robots() {
       year: 2024,
       name: "Iron Sword",
       game: "Crecsendo",
-      image: "/iron-sword.jpeg",
+      image: "img/iron-sword.jpeg",
       features: [
         { name: "Hybrid Intake", icon: <Tool className="h-5 w-5" /> },
         { name: "Auto-Balance", icon: <Shield className="h-5 w-5" /> },

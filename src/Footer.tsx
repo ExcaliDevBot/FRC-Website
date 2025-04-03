@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-4 space-y-4 md:space-y-0">
                     <div className="mb-4 md:mb-0">
-                        <img src='/Logo-Transparent.png' alt="Team Logo" className="h-12 w-12 mx-auto md:mx-0" />
+                        <img src='/img/Logo-Transparent.png' alt="Team Logo" className="h-12 w-12 mx-auto md:mx-0" />
                     </div>
                     <div className="text-center md:text-left">
                         <p>&copy; 2025 Team Excalibur #6738. All rights reserved.</p>

@@ -35,16 +35,16 @@ function HomePage() {
     ];
 
     const sponsors = [
-        {name: "Sponsor 1", logo: "/FIRST.png", link: "https://www.firstinspires.org/"},
-        {name: "Sponsor 2", logo: "/frc_reefscape.gif", link: "https://www.firstinspires.org/"},
-        {name: "Sponsor 3", logo: "/jetlaser.png", link: "https://www.jetlaser.com/"},
-        {name: "Sponsor 4", logo: "/modiin.png", link: "https://www.modiin.muni.il/"},
-        {name: "Sponsor 5", logo: "/peerspot.png", link: "https://www.peerspot.com/"},
-        {name: "Sponsor 6", logo: "/propal.png", link: "https://www.propal.com/"},
-        {name: "Sponsor 7", logo: "/sagol.png", link: "https://www.sagol.com/"},
-        {name: "Sponsor 8", logo: "/SolidWorks.png", link: "https://www.solidworks.com/"},
-        {name: "Sponsor 9", logo: "/yrm.png", link: "https://www.yrm.com/"},
-        {name: "Sponsor 10", logo: "/yeshiva.png", link: "https://www.yeshiva.com/"}
+        {name: "Sponsor 1", logo: "img/FIRST.png", link: "https://www.firstinspires.org/"},
+        {name: "Sponsor 2", logo: "img/frc_reefscape.gif", link: "https://www.firstinspires.org/"},
+        {name: "Sponsor 3", logo: "img/jetlaser.png", link: "https://www.jetlaser.com/"},
+        {name: "Sponsor 4", logo: "img/modiin.png", link: "https://www.modiin.muni.il/"},
+        {name: "Sponsor 5", logo: "img/peerspot.png", link: "https://www.peerspot.com/"},
+        {name: "Sponsor 6", logo: "img/propal.png", link: "https://www.propal.com/"},
+        {name: "Sponsor 7", logo: "img/sagol.png", link: "https://www.sagol.com/"},
+        {name: "Sponsor 8", logo: "img/SolidWorks.png", link: "https://www.solidworks.com/"},
+        {name: "Sponsor 9", logo: "img/yrm.png", link: "https://www.yrm.com/"},
+        {name: "Sponsor 10", logo: "img/yeshiva.png", link: "https://www.yeshiva.com/"}
     ];
 
     return (
@@ -59,7 +59,7 @@ function HomePage() {
             >
                 <div className="absolute inset-0">
                     <div
-                        className="absolute inset-0 bg-[url('/robot.jpg')] bg-cover bg-center mix-blend-overlay bg-top"></div>
+                        className="absolute inset-0 bg-[url('img/robot.jpg')] bg-cover bg-center mix-blend-overlay bg-top"></div>
                     <div className="absolute inset-0 bg-gradient-to-b from-team-blue/70 to-team-blue/10"></div>
                 </div>
                 <div className="relative z-10">
@@ -180,7 +180,7 @@ function HomePage() {
                             </div>
                         </div>
                         <div className="md:w-1/2 p-8 shadow-lg custom-background">
-                            <img src="/IMG_0318.JPG" alt="Current Robot"
+                            <img src="/img/IMG_0318.JPG" alt="Current Robot"
                                  className="rounded-lg w-full h-auto object-cover custom-border"/>
                         </div>
                     </div>
