@@ -59,7 +59,7 @@ function HomePage() {
             >
                 <div className="absolute inset-0">
                     <div
-                        className="absolute inset-0 bg-[url('img/robot.jpg')] bg-cover bg-center mix-blend-overlay bg-top"></div>
+                        className="absolute inset-0 bg-[url('/img/robot.jpg')] bg-cover bg-center mix-blend-overlay bg-top"></div>
                     <div className="absolute inset-0 bg-gradient-to-b from-team-blue/70 to-team-blue/10"></div>
                 </div>
                 <div className="relative z-10">
