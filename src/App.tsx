@@ -10,6 +10,7 @@ import TermsOfService from './Terms.tsx';
 import Gallery from './Gallery.tsx';
 import PrivacyPolicy from './Privacy.tsx';
 import Resources from "./Recources.tsx";
+import LearnJewish from "./LearnJewish.tsx";
 // import ContactPage from './pages/ContactPage';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/robots" element={<Robots />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
+                <Route path="/learn-jewish" element={<LearnJewish />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/robots" element={<Robots />} />
