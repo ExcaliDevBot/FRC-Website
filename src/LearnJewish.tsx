@@ -23,7 +23,7 @@ function LearnJewish() {
     const [showShabbatTips, setShowShabbatTips] = useState(false);
     const [showPassoverTips, setShowPassoverTips] = useState(false);
     const [activeShabbatTab, setActiveShabbatTab] = useState<'basics' | 'traditions' | 'modern' | 'facts'>('basics');
-    const [activePassoverTab, setActivePassoverTab] = useState<'story' | 'seder' | 'food' | 'modern'>('story');
+    const [activePassoverTab, setActivePassoverTab] = useState<'story' | 'seder' | 'food'>('story');
 
     const TabButton = ({isActive, onClick, children}: {
         isActive: boolean;
@@ -508,12 +508,6 @@ function LearnJewish() {
                             >
                                 Food Guide
                             </TabButton>
-                            <TabButton
-                                isActive={activePassoverTab === 'modern'}
-                                onClick={() => setActivePassoverTab('modern')}
-                            >
-                                Modern Ideas
-                            </TabButton>
                         </div>
 
                         {/* Story Tab */}
@@ -563,8 +557,7 @@ function LearnJewish() {
                                     <div
                                         className="h-80 bg-cover bg-center rounded-xl mb-6"
                                         style={{
-                                            backgroundImage:
-                                                'url("https://images.unsplash.com/photo-1585413833541-a5c9c4a50c98?auto=format&fit=crop&q=80")',
+                                            backgroundImage: 'url("https://images.theconversation.com/files/589208/original/file-20240419-16-p9xoa7.jpg?ixlib=rb-4.1.0&rect=0%2C22%2C1022%2C510&q=45&auto=format&w=1356&h=668&fit=crop")',
                                         }}
                                     />
                                     <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
@@ -673,7 +666,7 @@ function LearnJewish() {
                                         className="h-48 bg-cover bg-center rounded-xl mb-6"
                                         style={{
                                             backgroundImage:
-                                                'url("https://images.unsplash.com/photo-1584483766114-2cea6facdf57?auto=format&fit=crop&q=80")',
+                                                'url("https://sivanrahavmeir.com/wp-content/uploads/2022/04/WhatsApp-Image-2022-04-11-at-00.54.25.jpeg")',
                                         }}
                                     />
 
@@ -767,7 +760,7 @@ function LearnJewish() {
                                         className="h-64 bg-cover bg-center rounded-xl mb-6"
                                         style={{
                                             backgroundImage:
-                                                'url("https://images.unsplash.com/photo-1584476614945-f4d5c3ad00be?auto=format&fit=crop&q=80")',
+                                                'url("https://cdn1.yhb.org.il/uploads/revivim1091.jpg")',
                                         }}
                                     />
 
@@ -809,105 +802,7 @@ function LearnJewish() {
                             </div>
                         </div>
 
-                        {/* Modern Ideas Tab */}
-                        <div className={activePassoverTab === 'modern' ? 'block' : 'hidden'}>
-                            <div className="grid md:grid-cols-3 gap-6 mb-8">
-                                <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-xl">
-                                    <h3 className="flex items-center gap-2 text-lg font-semibold text-pink-700 mb-3">
-                                        <Camera className="h-5 w-5"/>
-                                        Creative Ideas
-                                    </h3>
-                                    <ul className="space-y-2 text-pink-800">
-                                        <li>• Make a TikTok Haggadah</li>
-                                        <li>• Create plague-themed decorations</li>
-                                        <li>• Design a modern seder plate</li>
-                                        <li>• Start a Passover food blog</li>
-                                    </ul>
-                                </div>
 
-                                <div className="bg-gradient-to-br from-violet-50 to-purple-50 p-6 rounded-xl">
-                                    <h3 className="flex items-center gap-2 text-lg font-semibold text-violet-700 mb-3">
-                                        <MessageCircle className="h-5 w-5"/>
-                                        Discussion Topics
-                                    </h3>
-                                    <ul className="space-y-2 text-violet-800">
-                                        <li>• Modern-day freedom struggles</li>
-                                        <li>• Personal growth journeys</li>
-                                        <li>• Social justice connections</li>
-                                        <li>• Environmental freedom</li>
-                                    </ul>
-                                </div>
-
-                                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl">
-                                    <h3 className="flex items-center gap-2 text-lg font-semibold text-blue-700 mb-3">
-                                        <Users className="h-5 w-5"/>
-                                        Social Action
-                                    </h3>
-                                    <ul className="space-y-2 text-blue-800">
-                                        <li>• Organize food drives</li>
-                                        <li>• Support refugees</li>
-                                        <li>• Fight modern slavery</li>
-                                        <li>• Help the homeless</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl">
-                                    <h3 className="text-xl font-semibold text-amber-700 mb-4">
-                                        Modern Seder Ideas
-                                    </h3>
-                                    <div className="grid gap-4">
-                                        <div className="bg-white/50 p-4 rounded-lg">
-                                            <h4 className="font-semibold text-amber-900 mb-2">Interactive
-                                                Elements</h4>
-                                            <ul className="space-y-2 text-amber-800">
-                                                <li>• Create a freedom wall</li>
-                                                <li>• Make plague bags</li>
-                                                <li>• Do freedom skits</li>
-                                                <li>• Write modern prayers</li>
-                                            </ul>
-                                        </div>
-                                        <div className="bg-white/50 p-4 rounded-lg">
-                                            <h4 className="font-semibold text-amber-900 mb-2">Tech Integration</h4>
-                                            <ul className="space-y-2 text-amber-800">
-                                                <li>• Virtual family joining</li>
-                                                <li>• Digital Haggadah apps</li>
-                                                <li>• Passover playlists</li>
-                                                <li>• Social media sharing</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div
-                                        className="h-48 bg-cover bg-center rounded-xl mb-6"
-                                        style={{
-                                            backgroundImage:
-                                                'url("https://images.unsplash.com/photo-1585413833541-a5c9c4a50c98?auto=format&fit=crop&q=80")',
-                                        }}
-                                    />
-
-                                    <div className="bg-gradient-to-br from-emerald-50 to-green-50 p-6 rounded-xl">
-                                        <h3 className="text-xl font-semibold text-emerald-700 mb-4">
-                                            Making It Meaningful
-                                        </h3>
-                                        <p className="text-emerald-800 mb-4">
-                                            Remember, Passover is about connecting ancient traditions with modern
-                                            life.
-                                            Make it relevant to YOUR journey and experiences!
-                                        </p>
-                                        <div className="bg-white/50 p-4 rounded-lg">
-                                            <p className="text-emerald-900">
-                                                "In every generation, each person must see themselves as if they
-                                                personally came out of Egypt."
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <button
                             onClick={() => setShowPassoverTips(!showPassoverTips)}
