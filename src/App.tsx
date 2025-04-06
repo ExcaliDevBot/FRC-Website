@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
