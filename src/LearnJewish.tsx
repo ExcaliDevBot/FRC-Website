@@ -98,8 +98,8 @@ function LearnJewish() {
                             <div className="p-8 text-white">
                                 <h1 className="text-5xl font-bold mb-4">Shabbat</h1>
                                 <p className="text-xl max-w-2xl">
-                                    Your weekly digital detox! Discover the magic of Shabbat -
-                                    25 hours of pure connection, relaxation, and spiritual vibes. ✨
+                                    Our weekly digital detox! Discover the magic of Shabbat -
+                                    25 hours of pure disconnection from our devices, relaxation, and spiritual vibes.
                                 </p>
                             </div>
                         </div>
@@ -466,7 +466,7 @@ function LearnJewish() {
 
 
                 {/* Passover Section */}
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden mt-12">
                     {/* Hero Section */}
                     <div className="relative">
                         <div
