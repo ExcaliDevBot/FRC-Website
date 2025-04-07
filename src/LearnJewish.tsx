@@ -2,27 +2,20 @@ import React, {useState} from 'react';
 import {
     Heading as Bread,
     Wine,
-    Star,
     Scroll,
     Flame,
-    Moon,
     Heart,
     Clock,
-    Users,
     Book,
     Music,
-    Sparkles,
     Utensils,
-    Camera,
-    MessageCircle,
-    Gift,
     Trophy
 } from 'lucide-react';
 
 function LearnJewish() {
     const [showShabbatTips, setShowShabbatTips] = useState(false);
     const [showPassoverTips, setShowPassoverTips] = useState(false);
-    const [activeShabbatTab, setActiveShabbatTab] = useState<'basics' | 'traditions' | 'modern' | 'facts'>('basics');
+    const [activeShabbatTab, setActiveShabbatTab] = useState<'basics' | 'traditions' | 'facts'>('basics');
     const [activePassoverTab, setActivePassoverTab] = useState<'story' | 'seder' | 'food'>('story');
 
     const TabButton = ({isActive, onClick, children}: {
@@ -119,12 +112,6 @@ function LearnJewish() {
                                 onClick={() => setActiveShabbatTab('traditions')}
                             >
                                 Traditions
-                            </TabButton>
-                            <TabButton
-                                isActive={activeShabbatTab === 'modern'}
-                                onClick={() => setActiveShabbatTab('modern')}
-                            >
-                                Modern Take
                             </TabButton>
                             <TabButton
                                 isActive={activeShabbatTab === 'facts'}
@@ -263,76 +250,6 @@ function LearnJewish() {
                                             <li>• Blessing the Children</li>
                                             <li>• Zimrot (Shabbat Table Songs)</li>
                                         </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Modern Take Tab */}
-                        <div className={activeShabbatTab === 'modern' ? 'block' : 'hidden'}>
-                            <div className="grid md:grid-cols-3 gap-6 mb-8">
-                                <div className="bg-gradient-to-br from-violet-50 to-purple-50 p-6 rounded-xl">
-                                    <h3 className="flex items-center gap-2 text-lg font-semibold text-violet-700 mb-3">
-                                        <Users className="h-5 w-5"/>
-                                        Social Ideas
-                                    </h3>
-                                    <ul className="space-y-2 text-violet-800">
-                                        <li>• Host a Shabbat dinner potluck</li>
-                                        <li>• Start a teen-only Shabbat lunch group</li>
-                                        <li>• Organize Shabbat walks with friends</li>
-                                        <li>• Plan screen-free game tournaments</li>
-                                    </ul>
-                                </div>
-
-                                <div className="bg-gradient-to-br from-fuchsia-50 to-pink-50 p-6 rounded-xl">
-                                    <h3 className="flex items-center gap-2 text-lg font-semibold text-fuchsia-700 mb-3">
-                                        <Sparkles className="h-5 w-5"/>
-                                        Creative Twists
-                                    </h3>
-                                    <ul className="space-y-2 text-fuchsia-800">
-                                        <li>• Design your own challah covers</li>
-                                        <li>• Create a Shabbat playlist</li>
-                                        <li>• Start a Shabbat book club</li>
-                                        <li>• Make tie-dye challah bread</li>
-                                    </ul>
-                                </div>
-
-                                <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl">
-                                    <h3 className="flex items-center gap-2 text-lg font-semibold text-cyan-700 mb-3">
-                                        <Gift className="h-5 w-5"/>
-                                        Self-Care Ideas
-                                    </h3>
-                                    <ul className="space-y-2 text-cyan-800">
-                                        <li>• Practice meditation or yoga</li>
-                                        <li>• Journal your weekly highlights</li>
-                                        <li>• Take nature walks</li>
-                                        <li>• Try mindful eating practices</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="bg-white p-6 rounded-xl border border-indigo-100">
-                                <h3 className="text-xl font-semibold text-indigo-900 mb-4">
-                                    🌟 Making Shabbat Your Own
-                                </h3>
-                                <p className="text-indigo-800 mb-6">
-                                    Remember, there's no one "right" way to do Shabbat. It's about finding what
-                                    helps you
-                                    disconnect from the chaos and connect with what matters most to you.
-                                </p>
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div className="bg-indigo-50 p-4 rounded-lg">
-                                        <h4 className="font-semibold text-indigo-900 mb-2">Start Small</h4>
-                                        <p className="text-indigo-800">
-                                            Try unplugging for just part of Shabbat, or focus on one aspect like
-                                            family dinner.
-                                        </p>
-                                    </div>
-                                    <div className="bg-indigo-50 p-4 rounded-lg">
-                                        <h4 className="font-semibold text-indigo-900 mb-2">Make It Meaningful</h4>
-                                        <p className="text-indigo-800">
-                                            Add your own traditions that help you feel connected and refreshed.
-                                        </p>
                                     </div>
                                 </div>
                             </div>
