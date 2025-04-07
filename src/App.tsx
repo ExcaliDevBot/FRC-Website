@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useInView } from 'react-intersection-observer';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import TeamPage from './TeamPage';
@@ -10,8 +9,8 @@ import Gallery from './Gallery.tsx';
 import PrivacyPolicy from './Privacy.tsx';
 import Resources from "./Recources.tsx";
 import LearnJewish from "./LearnJewish.tsx";
-// import ContactPage from './pages/ContactPage';
 import Navbar from './Navbar';
+import SponsorUs from './SponsorUs.tsx';
 import Footer from './Footer';
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/robots" element={<Robots />} />
-                {/*<Route path="/sponsors" element={<SponsorsPage />} />*/}
+                <Route path="/sponsors-us" element={<SponsorUs />} />
                 {/*<Route path="/contact" element={<ContactPage />} />*/}
             </Routes>
             <Footer />

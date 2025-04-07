@@ -48,9 +48,9 @@ const Navbar: React.FC = () => {
                     <Link to="/robots" className="text-gray-600 hover:text-team-blue transition">Robots</Link>
                     <Link to="/resources" className="text-gray-600 hover:text-team-blue transition">Resources</Link>
                     <Link to="/learn" className="text-gray-600 hover:text-team-blue transition">Special</Link>
-                    <Link to="/contact"
+                    <Link to="/sponsors-us"
                           className="bg-team-blue text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition">
-                        Contact Us
+                        Sponsor Us
                     </Link>
                 </div>
             </div>
@@ -91,10 +91,10 @@ const Navbar: React.FC = () => {
                                   onClick={toggleNav}>Resources</Link>
                         </motion.div>
                         <motion.div variants={linkVariants}>
-                            <Link to="/contact"
+                            <Link to="/sponsors-us"
                                   className="bg-team-gold text-team-blue px-8 py-4 rounded-lg hover:bg-opacity-90 transition text-2xl"
                                   onClick={toggleNav}>
-                                Contact Us
+                                Sponsor Us
                             </Link>
                         </motion.div>
                     </motion.div>
