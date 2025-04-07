@@ -28,7 +28,7 @@ function App() {
                 <Route path="/robots" element={<Robots />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
-                <Route path="/learn-jewish" element={<LearnJewish />} />
+                <Route path="/learn" element={<LearnJewish />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/robots" element={<Robots />} />
