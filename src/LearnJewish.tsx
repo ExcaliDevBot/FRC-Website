@@ -343,41 +343,6 @@ function LearnJewish() {
                                 </div>
                             </div>
                         </div>
-
-                        <button
-                            onClick={() => setShowShabbatTips(!showShabbatTips)}
-                            className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors"
-                        >
-                            {showShabbatTips ? 'Hide Cool Tips' : 'Show Cool Tips'}
-                        </button>
-
-                        {showShabbatTips && (
-                            <div className="mt-6 bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl">
-                                <h3 className="text-xl font-semibold text-indigo-900 mb-4">
-                                    🌟 Teen Tips for an Awesome Shabbat
-                                </h3>
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <h4 className="font-semibold text-indigo-800 mb-3">Social Ideas</h4>
-                                        <ul className="space-y-2 text-indigo-800">
-                                            <li>• Host a Friday night dinner for friends</li>
-                                            <li>• Start a Shabbat afternoon book club</li>
-                                            <li>• Organize group walks or picnics</li>
-                                            <li>• Plan board game tournaments</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-semibold text-indigo-800 mb-3">Creative Ideas</h4>
-                                        <ul className="space-y-2 text-indigo-800">
-                                            <li>• Design your own Shabbat ritual items</li>
-                                            <li>• Create a special Shabbat playlist</li>
-                                            <li>• Learn to bake challah</li>
-                                            <li>• Start a Shabbat journal</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
                     </div>
                 </div>
 
@@ -718,50 +683,11 @@ function LearnJewish() {
                                 </div>
                             </div>
                         </div>
-
-
-
-                        <button
-                            onClick={() => setShowPassoverTips(!showPassoverTips)}
-                            className="mt-8 bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition-colors"
-                        >
-                            {showPassoverTips ? 'Hide Cool Tips' : 'Show Cool Tips'}
-                        </button>
-
-                        {showPassoverTips && (
-                            <div className="mt-6 bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-xl">
-                                <h3 className="text-xl font-semibold text-indigo-900 mb-4">
-                                    🌟 Make Passover Extra Fun
-                                </h3>
-                                <div className="grid md:grid-cols-2 gap-6">
-                                    <div>
-                                        <h4 className="font-semibold text-indigo-800 mb-3">Creative Ideas</h4>
-                                        <ul className="space-y-2 text-indigo-800">
-                                            <li>• Create your own Haggadah with memes</li>
-                                            <li>• Make TikTok videos about the 10 plagues</li>
-                                            <li>• Design a creative Seder plate</li>
-                                            <li>• Start new traditions with friends</li>
-                                        </ul>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-semibold text-indigo-800 mb-3">Food Ideas</h4>
-                                        <ul className="space-y-2 text-indigo-800">
-                                            <li>• Host a Passover recipe contest</li>
-                                            <li>• Create a matzah pizza bar</li>
-                                            <li>• Make chocolate-covered matzah</li>
-                                            <li>• Try different charoset recipes</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
                     </div>
                 </div>
-
             </main>
         </div>
-    )
-        ;
+    );
 }
 
 export default LearnJewish;
