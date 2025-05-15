@@ -2,34 +2,26 @@ import {Code, Zap, Users, Wrench, Target, Camera} from 'lucide-react';
 
 function TeamPage() {
     const mentors = [
-        {name: "Nave Peled", role: "Lead Mentor", expertise: "Team Managment"},
-        {name: "Eitan Cohen", role: "Programming Mentor", expertise: "Software Development"},
-        {name: "Ariel Korngut", role: "Strategy Mentor", expertise: "Strategic Planning and Game Analysis"},
-        {name: "Ido Rozenbaum", role: "Mechanical and CAD Mentor", expertise: "Mechanical Engineering"}
+        {name: "Eitan Cohen", role: "Lead Mentor", expertise: "Team Management"},
+        {name: "Elad Ben Shlomo", role: "Electrical Mentor", expertise: "Software Development"},
+        {name: "Amit Grossberger", role: "Strategy Mentor and FLL", expertise: "Strategic Planning and Game Analysis"},
+        {name: "Yaron Reznik", role: "Mechanical and CAD Mentor", expertise: "Mechanical Engineering"}
     ];
 
     const leadership = [
-        {name: "Asaf Kloot", role: "Captain"},
-        {name: "Amit Sucher", role: "Co-Captain & Strategy"},
-        {name: "Yoav Cohen", role: "Software Lead"},
+        {name: "Amit Sucher", role: "Captain"},
+        {name: "Ori Korngt", role: "Co-Captain"},
+        {name: "Yehuda Rothstein", role: "Software Lead"},
         {name: "Yishay Greenfeld", role: "Mechanical Lead"},
         {name: "Eylon Ben Shushan", role: "Electrical Lead"},
         {name: "Itamar Dudai", role: "Community Lead"},
-        {name: "Amichai Sedley", role: "Media Lead"},
-        {name: "Noam Novoslevski", role: "CAD Lead"},
-        {name: "Yonatan Ben - Shlomo", role: "Manufacturing Lead"},
-        {name: "Itay Keller", role: "Localization Lead"},
-        {name: "Ori Korngut", role: "Systems Admin"}
+        {name: "Amichai Sedley", role: "Media Lead"}
     ];
 
     const teamMembers = [
-        "Azriel Saar", "Chagai Rosen", "Eitan Berman", "Eitan Gottlieb",
-        "Ori Peer", "Elisha Flug", "Malachi Tzadok", "Nadav Yurman",
-        "Netanel Ekshtein", "Ramiel Waldoks", "Roi Eliad", "Yinon Strauss",
-        "Yishai Levran", "Asaf Hershkop", "Yehuda Rothstein", "Davidi Aharoni",
-        "Eitan Freeman", "Elad Cohen", "Elad Shayer", "Gilad Keller",
-        "Maor Patt", "Nehoari Bardogo", "Omer Familia", "Roi Duvdevani",
-        "Yair Levi", "Yonah Goldberg"
+        "Azriel Saar", "Eitan Gottlieb", "Chagai Rosen", "Eliyah Ben Lulu", "Gilad Keller", "Itamar Morgenshtein", "Malachi Tzadok",
+        "Nadav Philipson", "Nadav Yurman", "Noam Novoslevsky", "Ori Peer", "Ramiel Waldoks", "Roi Duvdevani", "Uri Feist", "Yonatan Ben Shlomo",
+        "Itamar Cohen", "Elad Cohen", "Yaer Nayot", "Yishay Levran", "Yair Levi", "Netanel Ekshtein", "Eliyah Kalfon", "Elad Shayer"
     ];
 
     const subteams = [
@@ -147,23 +139,6 @@ function TeamPage() {
                             </div>
                         ))}
                     </div>
-                </div>
-            </div>
-
-            {/* Join the Team */}
-            <div className="py-24 bg-team-blue relative overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
-                <div className="container mx-auto px-4 text-center relative">
-                    <h2 className="text-4xl font-bold text-white mb-6">Join Team Excalibur</h2>
-                    <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                        Are you passionate about robotics, engineering, or making a difference?
-                        We're always looking for dedicated students to join our team!
-                    </p>
-                    <button
-                        className="bg-team-gold text-team-blue px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition">
-                        Apply Now
-                    </button>
                 </div>
             </div>
         </div>
