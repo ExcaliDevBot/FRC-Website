@@ -15,7 +15,8 @@ function TeamPage() {
         {name: "Yishay Greenfeld", role: "Mechanical Lead"},
         {name: "Eylon Ben Shushan", role: "Electrical Lead"},
         {name: "Itamar Dudai", role: "Community Lead"},
-        {name: "Amichai Sedley", role: "Media Lead"}
+        {name: "Amichai Sedley", role: "Media Lead"},
+        {name: "Chagai Rosen", role: "Resources Lead"}
     ];
 
     const teamMembers = [
@@ -41,6 +42,23 @@ function TeamPage() {
         }
     ];
 
+    const alumni = [
+        {name: "Yoav Cohen", class: "2025", role: "Software Lead"},
+        {name: "Itay Keller", class: "2025", role: "Localization Lead"},
+        {name: "Omer Familia", class: "2025", role: "Electrical Team Member"},
+        {name: "Asaf Hershkop", class: "2025", role: "Software Team Member"},
+        {name: "Nehorai Bardogo", class: "2025", role: "Mechanical Team Member"},
+        {name: "Ziv Magen", class: "2025", role: "Mechanical Team Member"},
+        {name: "Roi Eliad", class: "2025", role: "Mechanical Team Member"},
+        {name: "Yonah Goldberg", class: "2025", role: "Community Team Member"},
+        {name: "Maor Patt", class: "2025", role: "Electrical Team Member"},
+        {name: "Aviad Reingold", class: "2024", role: "Captian"},
+        {name: "Shai Grossman", class: "2024", role: "Software Lead"},
+        {name: "Eitan Barth", class: "2024", role: "Electrical Lead"},
+        {name: "Elad Ben Shlomo", class: "2024", role: "Electrical Lead"},
+        {name: "Ori Gantz", class: "2024", role: "Electrical Lead"},
+        {name: "Liam Cohen", class: "2024", role: "Media Lead"},
+    ];
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
@@ -119,6 +137,34 @@ function TeamPage() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </div>
+
+            {/* Alumni Section */}
+            <div className="py-12 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold text-team-blue text-center mb-8">Our Alumni</h2>
+                    {Object.entries(
+                        alumni.reduce((groups, alum) => {
+                            groups[alum.class] = groups[alum.class] || [];
+                            groups[alum.class].push(alum);
+                            return groups;
+                        }, {} as Record<string, typeof alumni>)
+                    )
+                        .sort(([yearA], [yearB]) => parseInt(yearB) - parseInt(yearA)) // Sort years in descending order
+                        .map(([year, alumniGroup]) => (
+                            <div key={year} className="mb-8">
+                                <h3 className="text-xl font-semibold text-gray-600 mb-4">Class of {year}</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    {alumniGroup.map((alum, index) => (
+                                        <div key={index} className="text-gray-500 text-center">
+                                            <h4 className="text-lg font-medium">{alum.name}</h4>
+                                            <p className="text-sm italic">{alum.role}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                 </div>
             </div>
 
