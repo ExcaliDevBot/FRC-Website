@@ -153,12 +153,12 @@ function TeamPage() {
                     )
                         .sort(([yearA], [yearB]) => parseInt(yearB) - parseInt(yearA)) // Sort years in descending order
                         .map(([year, alumniGroup]) => (
-                            <div key={year} className="mb-8">
+                            <div key={year} className="mb-8 ">
                                 <h3 className="text-xl font-semibold text-gray-600 mb-4">Class of {year}</h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-gray-300 p-4 rounded-lg">
                                     {alumniGroup.map((alum, index) => (
-                                        <div key={index} className="text-gray-500 text-center">
-                                            <h4 className="text-lg font-medium">{alum.name}</h4>
+                                        <div key={index} className="text-team-blue text-center">
+                                            <h4 className="text-lg font-medium italic">{alum.name}</h4>
                                             <p className="text-sm italic">{alum.role}</p>
                                         </div>
                                     ))}
