@@ -11,7 +11,8 @@ import Resources from "./Recources.tsx";
 import Navbar from './Navbar';
 import SponsorUs from './SponsorUs.tsx';
 import Footer from './Footer';
-
+import LoginPage from './LoginPage.tsx';
+import Dashboard from './Dashboard';
 function App() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const toggleNav = () => setIsNavOpen(!isNavOpen);
@@ -30,6 +31,8 @@ function App() {
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/robots" element={<Robots />} />
                 <Route path="/sponsors-us" element={<SponsorUs />} />
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/dashboard" element={<Dashboard />} />
                 {/*<Route path="/contact" element={<ContactPage />} />*/}
             </Routes>
             <Footer />
