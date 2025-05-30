@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, get, set, update, remove } from "firebase/database";
@@ -58,71 +57,76 @@ const ManageUsers: React.FC = () => {
   };
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">Manage Users</h2>
-      <div className="mb-6">
-        <h3 className="text-xl font-semibold mb-2">Add New User</h3>
-        <input
-          type="text"
-          placeholder="Username"
-          value={newUser.username}
-          onChange={(e) => setNewUser({ ...newUser, username: e.target.value })}
-          className="block mb-2 p-2 border rounded"
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          value={newUser.email}
-          onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
-          className="block mb-2 p-2 border rounded"
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={newUser.password}
-          onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
-          className="block mb-2 p-2 border rounded"
-        />
-        <input
-          type="text"
-          placeholder="Role"
-          value={newUser.role}
-          onChange={(e) => setNewUser({ ...newUser, role: e.target.value })}
-          className="block mb-2 p-2 border rounded"
-        />
-        <button onClick={handleAddUser} className="bg-green-500 text-white px-4 py-2 rounded">
+    <div className="p-6 bg-gray-100 min-h-screen">
+      <h2 className="text-3xl font-bold mb-6 text-center">Manage Users</h2>
+      <div className="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-semibold mb-4">Add New User</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            type="text"
+            placeholder="Username"
+            value={newUser.username}
+            onChange={(e) => setNewUser({ ...newUser, username: e.target.value })}
+            className="p-2 border rounded w-full"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            value={newUser.email}
+            onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
+            className="p-2 border rounded w-full"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={newUser.password}
+            onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
+            className="p-2 border rounded w-full"
+          />
+          <input
+            type="text"
+            placeholder="Role"
+            value={newUser.role}
+            onChange={(e) => setNewUser({ ...newUser, role: e.target.value })}
+            className="p-2 border rounded w-full"
+          />
+        </div>
+        <button
+          onClick={handleAddUser}
+          className="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition"
+        >
           Add User
         </button>
       </div>
       <div>
-        <h3 className="text-xl font-semibold mb-2">Existing Users</h3>
-        <ul>
+        <h3 className="text-xl font-semibold mb-4">Existing Users</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(users).map(([username, userData]: any) => (
-            <li key={username} className="mb-4">
-              <p>
-                <strong>Username:</strong> {username}
-              </p>
-              <p>
+            <div key={username} className="bg-white p-4 rounded-lg shadow-md">
+              <p className="font-bold text-lg mb-2 text-team-blue">{username}</p>
+              <p className="text-gray-700 mb-1">
                 <strong>Email:</strong> {userData.email}
               </p>
-              <p>
+              <p className="text-gray-700 mb-4">
                 <strong>Role:</strong> {userData.role}
               </p>
-              <button
-                onClick={() => handleEditUser(username, { role: "updatedRole" })}
-                className="bg-blue-500 text-white px-4 py-2 rounded mr-2"
-              >
-                Edit
-              </button>
-              <button
-                onClick={() => handleDeleteUser(username)}
-                className="bg-red-500 text-white px-4 py-2 rounded"
-              >
-                Delete
-              </button>
-            </li>
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => handleEditUser(username, { role: "updatedRole" })}
+                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
+                >
+                  Edit
+                </button>
+                <button
+                  onClick={() => handleDeleteUser(username)}
+                  className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+                >
+                  Delete
+                </button>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
