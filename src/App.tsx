@@ -13,6 +13,8 @@ import SponsorUs from './SponsorUs.tsx';
 import Footer from './Footer';
 import LoginPage from './LoginPage.tsx';
 import Dashboard from './Dashboard';
+import QuestionnairePage from "./QuestionnairePage.tsx";
+import LeaderboardPage from "./LeaderboardPage.tsx";
 function App() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const toggleNav = () => setIsNavOpen(!isNavOpen);
@@ -33,6 +35,8 @@ function App() {
                 <Route path="/sponsors-us" element={<SponsorUs />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/community-points" element={<QuestionnairePage />} />
+                <Route path="/leaderboard" element={<LeaderboardPage />} />
                 {/*<Route path="/contact" element={<ContactPage />} />*/}
             </Routes>
             <Footer />
