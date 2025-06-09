@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {ref, get} from "firebase/database";
 import {db} from "./utils/firebaseConfig";
-import { Trophy, Crown, Medal, Star, Users, TrendingUp } from "lucide-react";
+import {Trophy, Crown, Medal, Star, Users, TrendingUp} from "lucide-react";
 
 
 // Define project factors
@@ -125,7 +125,6 @@ const LeaderboardPage: React.FC = () => {
                         <div className="flex items-center justify-center mb-4">
                             <Trophy className="w-12 h-12 text-indigo-600 mr-3"/>
                             <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                                טבלת ביצועים
                             </h1>
                         </div>
                         <p className="text-gray-600 text-lg">בדקו את מצב הנקודות הקהילתיות שלכם</p>
@@ -210,65 +209,55 @@ const LeaderboardPage: React.FC = () => {
                     )}
 
                     {/* Full Leaderboard Table */}
-                    <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-4">
-                            <div className="flex items-center">
-                                <Users className="w-6 h-6 text-white mr-3"/>
-                                <h2 className="text-xl font-bold text-white">טבלה מלאה</h2>
-                            </div>
-                        </div>
-
-                        <div className="overflow-x-auto">
-                            <table className="w-full">
-                                <thead className="bg-gray-50">
-                                <tr>
-                                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">מיקום</th>
-                                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">שם</th>
-                                    <th className="px-6 py-4 text-right text-sm font-semibold text-gray-600 uppercase tracking-wider">ניקוד</th>
-                                </tr>
-                                </thead>
-                                <tbody className="divide-y divide-gray-200">
-                                {leaderboardData.map((entry, index) => (
-                                    <tr
-                                        key={entry.name}
-                                        className={`hover:bg-gray-50 transition-colors duration-200 ${
-                                            index < 3 ? 'bg-gradient-to-r from-yellow-50 to-transparent' : ''
-                                        }`}
-                                    >
-                                        <td className="px-6 py-4 whitespace-nowrap">
-                                            <div className="flex items-center">
-                                                <div className="flex-shrink-0 mr-3">
-                                                    {getRankIcon(index)}
-                                                </div>
-                                                <span className={`text-lg font-bold ${
-                                                    index === 0 ? 'text-yellow-600' :
-                                                        index === 1 ? 'text-gray-600' :
-                                                            index === 2 ? 'text-orange-600' : 'text-gray-800'
-                                                }`}>
-                            #{index + 1}
-                          </span>
+                    <div className="overflow-x-auto" dir="rtl">
+                        <table className="w-full">
+                            <thead className="bg-gray-50">
+                            <tr>
+                                <th className="px-6 py-4 text-right text-sm font-semibold text-gray-600 uppercase tracking-wider">מיקום</th>
+                                <th className="px-6 py-4 text-right text-sm font-semibold text-gray-600 uppercase tracking-wider">שם</th>
+                                <th className="px-6 py-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">ניקוד</th>
+                            </tr>
+                            </thead>
+                            <tbody className="divide-y divide-gray-200">
+                            {leaderboardData.map((entry, index) => (
+                                <tr
+                                    key={entry.name}
+                                    className={`hover:bg-gray-50 transition-colors duration-200 ${
+                                        index < 3 ? 'bg-gradient-to-r from-yellow-50 to-transparent' : ''
+                                    }`}
+                                >
+                                    <td className="px-6 py-4 whitespace-nowrap text-right">
+                                        <div className="flex items-center justify-end">
+                                            <div className="flex-shrink-0 ml-1">
+                                                {getRankIcon(index)}
                                             </div>
-                                        </td>
-                                        <td className="px-6 py-4 whitespace-nowrap">
-                                            <div className="text-lg font-semibold text-gray-900">{entry.name}</div>
-                                        </td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-right">
-                                            <div className={`text-2xl font-bold ${
+                                            <span className={`text-lg font-bold ${
                                                 index === 0 ? 'text-yellow-600' :
                                                     index === 1 ? 'text-gray-600' :
                                                         index === 2 ? 'text-orange-600' : 'text-gray-800'
                                             }`}>
-                                                {entry.totalPoints.toFixed(1)}
-                                            </div>
-                                            <div className="text-sm text-gray-500">נקודות</div>
-                                        </td>
-                                    </tr>
-                                ))}
-                                </tbody>
-                            </table>
-                        </div>
+            #{index + 1}
+        </span>
+                                        </div>
+                                    </td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-right">
+                                        <div className="text-lg font-semibold text-gray-900">{entry.name}</div>
+                                    </td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-left">
+                                        <div className={`text-2xl font-bold ${
+                                            index === 0 ? 'text-yellow-600' :
+                                                index === 1 ? 'text-gray-600' :
+                                                    index === 2 ? 'text-orange-600' : 'text-gray-800'
+                                        }`}>
+                                            {entry.totalPoints.toFixed(1)}
+                                        </div>
+                                        <div className="text-sm text-gray-500">נקודות</div>
+                                    </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
                     </div>
-
                     {leaderboardData.length === 0 && (
                         <div className="text-center py-12">
                             <Users className="w-16 h-16 text-gray-400 mx-auto mb-4"/>
