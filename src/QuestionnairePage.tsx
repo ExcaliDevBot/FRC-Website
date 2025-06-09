@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Clock, Users, Award, CheckCircle, AlertCircle} from "lucide-react";
-import { ref, set, get } from "firebase/database";
-import { db } from "./utils/firebaseConfig";
+import {ref, set, get} from "firebase/database";
+import {db} from "./utils/firebaseConfig";
 
 const names = [
     "עמית סוכר", "אורי פאר", "אורי פייסט", "אורי קורנגוט", "אילון בן שושן", "איתמר דודאי",
@@ -18,24 +18,64 @@ const names = [
 const projects = [
     {
         name: "ביציקופטר + מדעני העתיד",
-        description: "פרויקט חדשנות וטכנולוגיה",
-        icon: <Award className="w-5 h-5"/>
+        icon: <Award className="w-5 h-5"/>, // Award icon for achievements
     },
     {
         name: "התנדבות במרכז אקי\"ם",
-        description: "עזרה קהילתית ותמיכה",
-        icon: <Users className="w-5 h-5"/>
+        icon: <Users className="w-5 h-5"/>, // Users icon for community involvement
     },
     {
         name: "הרצאות מדע וטכנולוגיה",
-        description: "חינוך והעברת ידע",
-        icon: <Clock className="w-5 h-5"/>
+        icon: <Clock className="w-5 h-5"/>, // Clock icon for time-based activities
+    },
+    {
+        name: "סדנאות AI ליסודי",
+        icon: <Award className="w-5 h-5"/>, // Award icon for educational workshops
+    },
+    {
+        name: "STEM לגנים",
+        icon: <CheckCircle className="w-5 h-5"/>, // CheckCircle icon for verified STEM activities
+    },
+    {
+        name: "יריד קיימות",
+        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for sustainability awareness
+    },
+    {
+        name: "ExcaliWEB",
+        icon: <Clock className="w-5 h-5"/>, // Clock icon for web-related projects
+    },
+    {
+        name: "תחרויות הבבאדע השנתיות",
+        icon: <Award className="w-5 h-5"/>, // Award icon for competitions
+    },
+    {
+        name: "קייטנת תשעת הימים",
+        icon: <Users className="w-5 h-5"/>, // Users icon for group activities
+    },
+    {
+        name: "פסטיבל רואים אחרת",
+        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+    },
+    {
+        name: "מנטור קבוצות FLL חרדיות",
+        icon: <CheckCircle className="w-5 h-5"/>, // CheckCircle icon for mentoring
+    },
+    {
+        name: "קייטנת רובוטיקה | בית ספר אריאל",
+        icon: <Clock className="w-5 h-5"/>, // Clock icon for robotics camps
+    },
+    {
+        name: "קייטנת רובוטיקה | משואות נריה",
+        icon: <Clock className="w-5 h-5"/>, // Clock icon for robotics camps
+    },
+    {
+        name: "ExcaliAcademy",
+        icon: <Award className="w-5 h-5"/>, // Award icon for educational programs
     },
     {
         name: "קורס מנטורים",
-        description: "פיתוח מנהיגות וחניכה",
-        icon: <CheckCircle className="w-5 h-5"/>
-    }
+        icon: <CheckCircle className="w-5 h-5"/>, // CheckCircle icon for mentor training
+    },
 ];
 
 const QuestionnairePage: React.FC = () => {
@@ -43,23 +83,24 @@ const QuestionnairePage: React.FC = () => {
             name: "",
             project: "",
             hours: "",
+            role: "", // New field for dropdown
         });
+
         const [isSubmitting, setIsSubmitting] = useState(false);
         const [errors, setErrors] = useState<{ [key: string]: string }>({});
         const [success, setSuccess] = useState(false);
 
         const handleChange = (e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
-            const {name, value} = e.target;
+            const {name, value, type, checked} = e.target;
             setFormData((prevData) => ({
                 ...prevData,
-                [name]: value,
+                [name]: type === "checkbox" ? checked : value, // Handle checkbox
             }));
 
-            // Clear error when user starts typing
             if (errors[name]) {
-                setErrors(prev => ({
+                setErrors((prev) => ({
                     ...prev,
-                    [name]: ""
+                    [name]: "",
                 }));
             }
         };
@@ -88,9 +129,13 @@ const QuestionnairePage: React.FC = () => {
                 const snapshot = await get(nameRef);
                 const responseCount = snapshot.exists() ? Object.keys(snapshot.val()).length : 0;
 
+                const hoursToSubmit = formData.role === "manager"
+                    ? parseInt(formData.hours) * 2 // Double hours if project manager
+                    : parseInt(formData.hours);
+
                 await set(ref(db, `questionnaireResponses/${formData.name}/${responseCount + 1}`), {
                     project: formData.project,
-                    hours: formData.hours,
+                    hours: hoursToSubmit,
                 });
 
                 setSuccess(true);
@@ -98,6 +143,7 @@ const QuestionnairePage: React.FC = () => {
                     name: "",
                     project: "",
                     hours: "",
+                    isProjectManager: false,
                 });
 
                 setTimeout(() => setSuccess(false), 3000);
@@ -129,7 +175,7 @@ const QuestionnairePage: React.FC = () => {
                             className="mb-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl animate-slide-up">
                             <div className="flex items-center">
                                 <CheckCircle className="w-5 h-5 text-green-600 mr-3"/>
-                                <span className="text-green-800 font-medium">הטופס נשלח בהצלחה!</span>
+                                <span className="text-green-800 font-medium text-right">הטופס נשלח בהצלחה!</span>
                             </div>
                         </div>
                     )}
@@ -140,7 +186,7 @@ const QuestionnairePage: React.FC = () => {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             {/* Name Selection */}
                             <div className="space-y-2">
-                                <label htmlFor="name" className="block text-navy-800 font-semibold text-lg mb-3">
+                                <label htmlFor="name" className="block text-navy-800 font-semibold text-lg mb-3 text-right">
                                     שם מלא
                                 </label>
                                 <div className="relative">
@@ -177,7 +223,8 @@ const QuestionnairePage: React.FC = () => {
 
                             {/* Project Selection */}
                             <div className="space-y-2">
-                                <label htmlFor="project" className="block text-navy-800 font-semibold text-lg mb-3">
+                                <label htmlFor="project"
+                                       className="block text-navy-800 font-semibold text-lg mb-3 text-right">
                                     פרויקט קהילתי
                                 </label>
                                 <div className="grid gap-3">
@@ -229,7 +276,8 @@ const QuestionnairePage: React.FC = () => {
 
                             {/* Hours Input */}
                             <div className="space-y-2">
-                                <label htmlFor="hours" className="block text-navy-800 font-semibold text-lg mb-3">
+                                <label htmlFor="hours"
+                                       className="block text-navy-800 font-semibold text-lg mb-3 text-right">
                                     מספר שעות
                                 </label>
                                 <div className="relative">
@@ -269,14 +317,48 @@ const QuestionnairePage: React.FC = () => {
                                 </div>
                             )}
 
+                            {/* Project Manager Dropdown */}
+                            <div className="space-y-4">
+                                <label htmlFor="role" className="block text-navy-800 font-semibold text-lg mb-3 text-right">
+                                    תפקיד
+                                </label>
+                                <div className="relative">
+                                    <select
+                                        id="role"
+                                        name="role"
+                                        value={formData.role}
+                                        onChange={handleChange}
+                                        className={`w-full px-4 py-4 bg-white border-2 rounded-xl text-navy-800 font-medium
+                focus:border-gold-400 focus:ring-2 focus:ring-gold-100 focus:outline-none
+                transition-all duration-200 appearance-none cursor-pointer
+                ${errors.role ? 'border-red-300 focus:border-red-400 focus:ring-red-100' : 'border-navy-100 hover:border-navy-200'}`}
+                                        dir="rtl"
+                                    >
+                                        <option value="" disabled className="text-navy-400">בחר תפקיד</option>
+                                        <option value="manager" className="text-navy-800">אחראי פרוייקט</option>
+                                        <option value="volunteer" className="text-navy-800">מתנדב</option>
+                                    </select>
+                                    <div className="absolute left-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                        <div
+                                            className="w-2 h-2 border-r-2 border-b-2 border-navy-400 transform rotate-45"></div>
+                                    </div>
+                                </div>
+                                {errors.role && (
+                                    <div className="flex items-center mt-2">
+                                        <AlertCircle className="w-4 h-4 text-red-500 mr-2"/>
+                                        <span className="text-red-600 text-sm">{errors.role}</span>
+                                    </div>
+                                )}
+                            </div>
+
                             {/* Submit Button */}
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className={`w-full py-4 px-6 rounded-xl font-bold text-lg transition-all duration-200 
+                                className={`w-full py-4 px-6 rounded-xl font-bold text-lg transition-all duration-200 bg-team-blue
                 ${isSubmitting
-                                    ? 'bg-navy-300 text-navy-100 cursor-not-allowed'
-                                    : 'bg-gradient-to-r from-navy-900 to-navy-800 hover:from-navy-800 hover:to-navy-700 text-red shadow-lg hover:shadow-xl transform hover:-translate-y-0.5'
+                                    ? 'bg-navy-300 text-navy-100 cursor-not-allowed text-team-gold'
+                                    : 'bg-gradient-to-r from-navy-900 to-navy-800 hover:from-navy-800 text-team-gold hover:to-navy-700 text-red shadow-lg hover:shadow-xl transform hover:-translate-y-0.5'
                                 }`}
                             >
                                 {isSubmitting ? (
