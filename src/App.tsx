@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {useState} from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import TeamPage from './TeamPage';
@@ -15,31 +15,33 @@ import LoginPage from './LoginPage.tsx';
 import Dashboard from './Dashboard';
 import QuestionnairePage from "./QuestionnairePage.tsx";
 import LeaderboardPage from "./LeaderboardPage.tsx";
+import EditSubmissionsPage from "./EditSubmissionsPage.tsx";
+
 function App() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const toggleNav = () => setIsNavOpen(!isNavOpen);
 
     return (
         <Router>
-            <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav} />
+            <Navbar isNavOpen={isNavOpen} toggleNav={toggleNav}/>
             <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/team" element={<TeamPage />} />
-                <Route path="/robots" element={<Robots />} />
-                <Route path="/gallery" element={<Gallery />} />
-                <Route path="/terms-of-service" element={<TermsOfService />} />
-                <Route path="/privacy" element={<PrivacyPolicy />} />
-                <Route path="/resources" element={<Resources />} />
-                <Route path="/robots" element={<Robots />} />
-                <Route path="/sponsors-us" element={<SponsorUs />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/community-points" element={<QuestionnairePage />} />
-                <Route path="/leaderboard" element={<LeaderboardPage />} />
-                {/*<Route path="/contact" element={<ContactPage />} />*/}
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
+                <Route path="/team" element={<TeamPage/>}/>
+                <Route path="/robots" element={<Robots/>}/>
+                <Route path="/gallery" element={<Gallery/>}/>
+                <Route path="/terms-of-service" element={<TermsOfService/>}/>
+                <Route path="/privacy" element={<PrivacyPolicy/>}/>
+                <Route path="/resources" element={<Resources/>}/>
+                <Route path="/robots" element={<Robots/>}/>
+                <Route path="/sponsors-us" element={<SponsorUs/>}/>
+                <Route path="/login" element={<LoginPage/>}/>
+                <Route path="/dashboard" element={<Dashboard/>}/>
+                <Route path="/community-points" element={<QuestionnairePage/>}/>
+                <Route path="/leaderboard" element={<LeaderboardPage/>}/>
+                <Route path="/edit" element={<EditSubmissionsPage/>}/>
             </Routes>
-            <Footer />
+            <Footer/>
         </Router>
     );
 }
