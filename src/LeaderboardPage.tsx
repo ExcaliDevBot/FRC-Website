@@ -6,8 +6,6 @@ import {Trophy, Crown, Medal, Star, Users, TrendingUp} from "lucide-react";
 
 // Define project factors
 const projectFactors: { [projectName: string]: number } = {
-    "ביציקופטר + מדעני העתיד": 1.5,
-    "הרצאות מדע וטכנולוגיה": 2,
     "קורס מנטורים": 1,
 };
 
