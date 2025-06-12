@@ -47,10 +47,6 @@ const projects = [
     {
         name: "תחרויות הבבאדע השנתיות",
         icon: <Award className="w-5 h-5"/>, // Award icon for competitions
-    },,
-    {
-        name: "מינטור קבוצת FLL",
-        icon: <Award className="w-5 h-5"/>, // Award icon for competitions
     },
     {
         name: "קייטנת תשעת הימים",
@@ -58,6 +54,10 @@ const projects = [
     },
     {
         name: "פסטיבל רואים אחרת",
+        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+    },
+    {
+        name: " מנטור קבוצות FLL",
         icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
     },
     {
