@@ -47,6 +47,10 @@ const projects = [
     {
         name: "תחרויות הבבאדע השנתיות",
         icon: <Award className="w-5 h-5"/>, // Award icon for competitions
+    },,
+    {
+        name: "מינטור קבוצת FLL",
+        icon: <Award className="w-5 h-5"/>, // Award icon for competitions
     },
     {
         name: "קייטנת תשעת הימים",
