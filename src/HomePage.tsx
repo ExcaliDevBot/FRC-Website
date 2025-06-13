@@ -23,17 +23,6 @@ function HomePage() {
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
     const toggleNav = () => setIsNavOpen(!isNavOpen);
-
-    const leaders = [
-        {name: "Asaf Kloot", role: "Captain"},
-        {name: "Amit Sucher", role: "Co-Captain"},
-        {name: "Yoav Cohen", role: "Software Lead"},
-        {name: "Yishay Greenfeld", role: "Mechanical Lead"},
-        {name: "Eylon Ben Shusan", role: "Electrical Lead"},
-        {name: "Itamar Dudai", role: "Community Lead"},
-        {name: "Amichai Sedley", role: "Media Lead"}
-    ];
-
     const sponsors = [
         {name: "Sponsor 1", logo: "img/FIRST.png", link: "https://www.firstinspires.org/"},
         {name: "Sponsor 2", logo: "img/frc_reefscape.gif", link: "https://www.firstinspires.org/"},
@@ -141,14 +130,14 @@ function HomePage() {
 
                         <div className="md:w-1/2">
                             <div
-                                className="inline-block bg-team-gold text-white px-3 py-1 rounded-full text-sm font-semibold mb-5">
+                                className="inline-block bg-team-gold text-white px-3 py-1 rounded-full text-sm font-semibold mb-5 italic">
                                 Current Season
                             </div>
-                            <h2 className="text-4xl font-bold text-team-blue mb-6">2025 Season - Reefscape</h2>
+                            <h2 className="text-4xl font-bold text-team-blue mb-6">2025 Season | Reefscape</h2>
                             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                                 This season, we're taking on the FIRST Robotics Competition challenge "REEFSCAPE".
                                 Our robot features advanced autonomous capabilities, precise coral and algae scoring
-                                mechanisms, and innovative software solutions.
+                                mechanisms, and Cool software features.
                             </p>
                             <div className="flex items-center space-x-6 text-sm mb-8">
                                 <div className="flex items-center">
