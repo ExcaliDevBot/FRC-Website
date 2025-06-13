@@ -12,16 +12,16 @@ function TeamPage() {
         {name: "Amit Sucher", role: "Captain"},
         {name: "Ori Korngt", role: "Co-Captain"},
         {name: "Yehuda Rothstein", role: "Software Lead"},
-        {name: "Yishay Greenfeld", role: "Mechanical Lead"},
+        {name: "Roi Duvdevani", role: "Mechanical Lead"},
         {name: "Eylon Ben Shushan", role: "Electrical Lead"},
         {name: "Itamar Dudai", role: "Community Lead"},
         {name: "Amichai Sedley", role: "Media Lead"},
-        {name: "Chagai Rosen", role: "Resources Lead"}
+        {name: "Chagai Rosen", role: "Resources & FLL Lead"}
     ];
 
     const teamMembers = [
-        "Azriel Saar", "Eitan Gottlieb", "Chagai Rosen", "Eliyah Ben Lulu", "Gilad Keller", "Itamar Morgenshtein", "Malachi Tzadok",
-        "Nadav Philipson", "Nadav Yurman", "Noam Novoslevsky", "Ori Peer", "Ramiel Waldoks", "Roi Duvdevani", "Uri Feist", "Yonatan Ben Shlomo",
+        "Azriel Saar", "Eitan Gottlieb", "Yishay Greenfeld", "Chagai Rosen", "Eliyah Ben Lulu", "Gilad Keller", "Itamar Morgenshtein", "Malachi Tzadok",
+        "Nadav Philipson", "Nadav Yurman", "Noam Novoslevsky", "Ori Peer", "Ramiel Waldoks", , "Uri Feist", "Yonatan Ben Shlomo",
         "Itamar Cohen", "Elad Cohen", "Yaer Nayot", "Yishay Levran", "Yair Levi", "Netanel Ekshtein", "Eliyah Kalfon", "Elad Shayer"
     ];
 
@@ -98,9 +98,14 @@ function TeamPage() {
             <div className="py-12 bg-white">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center mb-8">Leadership Team</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
                         {leadership.map((leader, index) => (
-                            <div key={index} className="flex flex-col items-center p-4 border rounded-lg">
+                            <div
+                                key={index}
+                                className={`flex flex-col items-center p-4 border rounded-lg ${
+                                    index === leadership.length - 1 ? 'lg:col-start-3' : ''
+                                }`}
+                            >
                                 <h3 className="text-lg font-semibold mb-1">{leader.name}</h3>
                                 <p className="text-gray-600">{leader.role}</p>
                             </div>
@@ -155,7 +160,8 @@ function TeamPage() {
                         .map(([year, alumniGroup]) => (
                             <div key={year} className="mb-8 ">
                                 <h3 className="text-xl font-semibold text-gray-600 mb-4">Class of {year}</h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-gray-300 p-4 rounded-lg">
+                                <div
+                                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-gray-300 p-4 rounded-lg">
                                     {alumniGroup.map((alum, index) => (
                                         <div key={index} className="text-team-blue text-center">
                                             <h4 className="text-lg font-medium italic">{alum.name}</h4>
