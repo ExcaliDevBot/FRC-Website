@@ -3,27 +3,32 @@ import {Code, Zap, Users, Wrench, Target, Camera} from 'lucide-react';
 function TeamPage() {
     const mentors = [
         {name: "Eitan Cohen", role: "Lead Mentor", expertise: "Team Management"},
-        {name: "Elad Ben Shlomo", role: "Electrical Mentor", expertise: "Software Development"},
-        {name: "Amit Grossberger", role: "Strategy Mentor and FLL", expertise: "Strategic Planning and Game Analysis"},
-        {name: "Yaron Reznik", role: "Mechanical and CAD Mentor", expertise: "Mechanical Engineering"}
+        {name: "Elad Ben Shlomo", role: "Electrical Mentor", expertise: "Co-Lead Mentor and Electrical design"},
+        {name: "Amit Grossberger", role: "FLL Supervisior", expertise: "Logistics and Supervisor"},
+        {name: "Yaron Reznik", role: "Mechanical and CAD Mentor", expertise: "Mechanical Engineering"},
+        {name: "Ariel Korngut", role: "Strategy Mentor ", expertise: "Strategic Planning and Game Analysis"}
     ];
 
     const leadership = [
         {name: "Amit Sucher", role: "Captain"},
-        {name: "Ori Korngt", role: "Co-Captain"},
+        {name: "Ori Korngt", role: "co - Captain"},
         {name: "Yehuda Rothstein", role: "Software Lead"},
         {name: "Roi Duvdevani", role: "Mechanical Lead"},
         {name: "Eylon Ben Shushan", role: "Electrical Lead"},
         {name: "Itamar Dudai", role: "Community Lead"},
         {name: "Amichai Sedley", role: "Media Lead"},
-        {name: "Chagai Rosen", role: "Resources & FLL Lead"}
+        {name: "Chagai Rosen", role: "Resources Lead"}
     ];
 
     const teamMembers = [
-        "Azriel Saar", "Eitan Gottlieb", "Yishay Greenfeld", "Chagai Rosen", "Eliyah Ben Lulu", "Gilad Keller", "Itamar Morgenshtein", "Malachi Tzadok",
-        "Nadav Philipson", "Nadav Yurman", "Noam Novoslevsky", "Ori Peer", "Ramiel Waldoks", , "Uri Feist", "Yonatan Ben Shlomo",
-        "Itamar Cohen", "Elad Cohen", "Yaer Nayot", "Yishay Levran", "Yair Levi", "Netanel Ekshtein", "Eliyah Kalfon", "Elad Shayer"
-    ];
+        "Uri Feist", "Itamar Cohen Elias", "Itamar Morgenshtein", "Eitan Berman", "Eitan Gottlieb", "Eliyah Ben Lulu", "Eliyah Kalphon",
+        "Elad Cohen", "Elad Shayer", "Gilad Keller", "Ze'ev Yisrael Simons", "Yair Levi", "Yaer Nayot", "Yonatan Ben Shlomo", "Yishai Greenfeld",
+    "Yishai Levran", "Malachi Tzadok", "Nadav Yurman", "Nadav Philipson", "Noam Novoslevsky", "Netanel Ekshtein", "Ezra Nagar",
+    "Azriel Saar", "Amichai Sedley",  "Roi Hadad", "Ramiel Waldoks", "Shalev Levin", "Nadav Amiel", "Ariel Friedman",
+    "Naveh Naftali", "Eliyav Shapira", "Yair Edri", "Yiftach Stossel", "Shachar Rozewitz", "Matan Keller", "Yedidya Berdugo",
+    "Ori Siminovsky", "Eitan Kreiger", "Ariel Lipsker", "Asif Leshem", "Ariel Bergson", "Naveh Yeshpe"
+];
+
 
     const subteams = [
         {
@@ -43,6 +48,7 @@ function TeamPage() {
     ];
 
     const alumni = [
+        {name: "Asaf Kloot", class: "2025", role: "Software Lead"},
         {name: "Yoav Cohen", class: "2025", role: "Software Lead"},
         {name: "Itay Keller", class: "2025", role: "Localization Lead"},
         {name: "Omer Familia", class: "2025", role: "Electrical Team Member"},
@@ -55,8 +61,8 @@ function TeamPage() {
         {name: "Aviad Reingold", class: "2024", role: "Captian"},
         {name: "Shai Grossman", class: "2024", role: "Software Lead"},
         {name: "Eitan Barth", class: "2024", role: "Electrical Lead"},
-        {name: "Elad Ben Shlomo", class: "2024", role: "Electrical Lead"},
-        {name: "Ori Gantz", class: "2024", role: "Electrical Lead"},
+        {name: "Elad Ben Shlomo", class: "2024", role: "Electrical Team Member"},
+        {name: "Ori Gantz", class: "2024", role: "CAD Lead"},
         {name: "Liam Cohen", class: "2024", role: "Media Lead"},
     ];
     return (
@@ -113,22 +119,7 @@ function TeamPage() {
                     </div>
                 </div>
             </div>
-            {/* Mentors Section */}
-            <div className="py-24 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <h2 className="text-4xl font-bold text-team-blue text-center mb-16">Our Mentors</h2>
-                    <div className="grid md:grid-cols-4 gap-8">
-                        {mentors.map((mentor, index) => (
-                            <div key={index}
-                                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                <h3 className="text-xl font-semibold text-team-blue mb-3">{mentor.name}</h3>
-                                <p className="text-team-gold font-medium mb-2">{mentor.role}</p>
-                                <p className="text-gray-600">{mentor.expertise}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+
 
             {/* Team Members Section */}
             <div className="py-24">
@@ -139,6 +130,24 @@ function TeamPage() {
                             <div key={index}
                                  className="bg-gradient-to-br from-team-blue to-blue-900 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                                 <p className="text-sm font-medium">{member}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+
+            {/* Mentors Section */}
+            <div className="py-24 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <h2 className="text-4xl font-bold text-team-blue text-center mb-16">Our Mentors</h2>
+                    <div className="grid md:grid-cols-3 gap-8">
+                        {mentors.map((mentor, index) => (
+                            <div key={index}
+                                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                                <h3 className="text-xl font-semibold text-team-blue mb-3">{mentor.name}</h3>
+                                <p className="text-team-gold font-medium mb-2">{mentor.role}</p>
+                                <p className="text-gray-600">{mentor.expertise}</p>
                             </div>
                         ))}
                     </div>
@@ -173,6 +182,7 @@ function TeamPage() {
                         ))}
                 </div>
             </div>
+
 
             {/* Subteams Section */}
             <div className="py-24 bg-gray-50">
