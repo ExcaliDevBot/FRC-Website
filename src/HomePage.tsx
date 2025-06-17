@@ -93,7 +93,7 @@ function HomePage() {
             {/* Contact Us Modal */}
             {isModalOpen && (
                 <motion.div
-                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+                    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     transition={{duration: 0.5}}
