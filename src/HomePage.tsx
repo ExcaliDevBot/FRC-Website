@@ -11,7 +11,7 @@ import {
     Facebook,
     Instagram,
     Youtube,
-    Twitter
+    Twitter, XIcon, XOctagon, TwitchIcon
 } from 'lucide-react';
 
 function HomePage() {
@@ -127,13 +127,16 @@ function HomePage() {
                 <div className="container mx-auto px-4">
 
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-
+<div className="md:w-1/2 p-2 shadow-lg custom-background">
+                            <img src="/img/IMG_0318.JPG" alt="Current Robot"
+                                 className="rounded-lg w-full h-auto object-cover custom-border"/>
+                        </div>
                         <div className="md:w-1/2">
                             <div
-                                className="inline-block bg-team-gold text-white px-3 py-1 rounded-full text-sm font-semibold mb-5 italic">
+                                className="inline-block bg-team-gold text-white px-3 py-1 rounded-full text-sm font-semibold mb-5">
                                 Current Season
                             </div>
-                            <h2 className="text-4xl font-bold text-team-blue mb-6">2025 Season | Reefscape</h2>
+                            <h2 className="text-4xl font-bold text-team-blue mb-6">2025 Season / Reefscape</h2>
                             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
                                 This season, we're taking on the FIRST Robotics Competition challenge "REEFSCAPE".
                                 Our robot features advanced autonomous capabilities, precise coral and algae scoring
@@ -150,28 +153,25 @@ function HomePage() {
                                 </div>
                             </div>
                             <div className="flex space-x-4">
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                                <a href="https://facebook.com/excaliburfrc" target="_blank" rel="noopener noreferrer"
                                    className="text-gray-600 hover:text-team-blue transition">
                                     <Facebook className="h-6 w-6"/>
                                 </a>
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                <a href="https://instagram.com/excalibur_6738/" target="_blank" rel="noopener noreferrer"
                                    className="text-gray-600 hover:text-team-blue transition">
                                     <Instagram className="h-6 w-6"/>
                                 </a>
-                                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+                                <a href="https://youtube.com/@ExcaliburFRC" target="_blank" rel="noopener noreferrer"
                                    className="text-gray-600 hover:text-team-blue transition">
                                     <Youtube className="h-6 w-6"/>
                                 </a>
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                                <a href="http://x.com/ExcaliburFrc" target="_blank" rel="noopener noreferrer"
                                    className="text-gray-600 hover:text-team-blue transition">
                                     <Twitter className="h-6 w-6"/>
                                 </a>
                             </div>
                         </div>
-                        <div className="md:w-1/2 p-8 shadow-lg custom-background">
-                            <img src="/img/IMG_0318.JPG" alt="Current Robot"
-                                 className="rounded-lg w-full h-auto object-cover custom-border"/>
-                        </div>
+
                     </div>
                 </div>
             </motion.div>

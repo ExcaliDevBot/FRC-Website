@@ -18,5 +18,5 @@ body {
 .custom-background {
     background: linear-gradient(to bottom, #F5E565, #0083AE, #0083AE, #000000);
     border-radius: 10px; /* Adjust the radius as needed */
-    padding: 18px; /* Adjust the padding as needed */
+    padding: 6px; /* Adjust the padding as needed */
 }
