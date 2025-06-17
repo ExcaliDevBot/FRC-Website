@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import { Lock, Shield, Eye, Database } from 'lucide-react';
 
 function PrivacyPolicy() {

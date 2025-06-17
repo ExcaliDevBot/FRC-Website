@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Camera, Calendar, MapPin, Users, X, Filter, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import { Camera, Calendar, MapPin, X, Filter, ChevronRight } from 'lucide-react';
 
 function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);

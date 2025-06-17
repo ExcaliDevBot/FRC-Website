@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 import { Award, BookOpen, Target, Users } from 'lucide-react';
 
 function AboutPage() {

@@ -16,7 +16,6 @@ import {
 
 function HomePage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isNavOpen, setIsNavOpen] = useState(false);
     const {ref: heroRef, inView: heroInView} = useInView({triggerOnce: true});
     const {ref: statsRef, inView: statsInView} = useInView({triggerOnce: true});
 
@@ -27,7 +26,6 @@ function HomePage() {
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
-    const toggleNav = () => setIsNavOpen(!isNavOpen);
     const sponsors = [
         {name: "Sponsor 1", logo: "img/FIRST.png", link: "https://www.firstinspires.org/"},
         {name: "Sponsor 2", logo: "img/frc_reefscape.gif", link: "https://www.firstinspires.org/"},

@@ -28,7 +28,7 @@ function Robots() {
                 {name: "Rapid Coral Scoring", icon: <Zap className="h-5 w-5"/>},
                 {name: "Dynamic Swerve", icon: <Gauge className="h-5 w-5"/>}
             ],
-            achievements: ["Industrial Design Award"],
+            achievements: ["ISR1 Industrial Design Award", "ISR4 Engineering Inspiration Award", "DCMP Engineering Inspiration Award", "Qualified for Newton Division"],
             description: "Our most advanced robot yet, featuring state-of-the-art vision processing and precise scoring mechanisms."
         },
         {
@@ -47,7 +47,7 @@ function Robots() {
         {
             year: 2023,
             name: "Merlin",
-            game: "PowerUp",
+            game: "ChargedUp",
             image: "img/merlin.JPG",
             features: [
                 {name: "Smart Arm Control", icon: <Anchor className="h-5 w-5"/>},

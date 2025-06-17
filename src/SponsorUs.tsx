@@ -93,7 +93,7 @@ function SponsorUs() {
             icon: <Target className="h-6 w-6"/>
         },
         {
-            metric: "8+",
+            metric: "10",
             label: "Years of Excellence",
             icon: <Trophy className="h-6 w-6"/>
         }
