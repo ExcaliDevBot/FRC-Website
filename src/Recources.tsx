@@ -15,8 +15,12 @@ import {
     Type,
     Palette
 } from 'lucide-react';
+import {useEffect} from "react";
 
 function Resources() {
+      useEffect(() => {
+        document.title = "Resources | Excalibur FRC";
+    }, []);
     const categories = [
         {
             title: "Technical Documentation",

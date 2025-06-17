@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Award, BookOpen, Target, Users } from 'lucide-react';
 
 function AboutPage() {
+    useEffect(() => {
+        document.title = "About | Excalibur FRC";
+
+    }, []);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}

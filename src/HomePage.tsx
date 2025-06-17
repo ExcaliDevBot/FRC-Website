@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
 import {
@@ -11,7 +11,7 @@ import {
     Facebook,
     Instagram,
     Youtube,
-    Twitter, XIcon, XOctagon, TwitchIcon
+    Twitter
 } from 'lucide-react';
 
 function HomePage() {
@@ -19,6 +19,11 @@ function HomePage() {
     const [isNavOpen, setIsNavOpen] = useState(false);
     const {ref: heroRef, inView: heroInView} = useInView({triggerOnce: true});
     const {ref: statsRef, inView: statsInView} = useInView({triggerOnce: true});
+
+    useEffect(() => {
+        document.title = "Home | Excalibur FRC";
+
+    }, []);
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
@@ -127,7 +132,7 @@ function HomePage() {
                 <div className="container mx-auto px-4">
 
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-<div className="md:w-1/2 p-2 shadow-lg custom-background">
+                        <div className="md:w-1/2 p-2 shadow-lg custom-background">
                             <img src="/img/IMG_0318.JPG" alt="Current Robot"
                                  className="rounded-lg w-full h-auto object-cover custom-border"/>
                         </div>
@@ -157,7 +162,8 @@ function HomePage() {
                                    className="text-gray-600 hover:text-team-blue transition">
                                     <Facebook className="h-6 w-6"/>
                                 </a>
-                                <a href="https://instagram.com/excalibur_6738/" target="_blank" rel="noopener noreferrer"
+                                <a href="https://instagram.com/excalibur_6738/" target="_blank"
+                                   rel="noopener noreferrer"
                                    className="text-gray-600 hover:text-team-blue transition">
                                     <Instagram className="h-6 w-6"/>
                                 </a>

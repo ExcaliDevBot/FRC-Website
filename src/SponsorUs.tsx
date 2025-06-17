@@ -11,8 +11,13 @@ import {
     HandHeart,
     Star
 } from 'lucide-react';
+import {useEffect} from "react";
 
 function SponsorUs() {
+        useEffect(() => {
+        document.title = "Sponsor Us | Excalibur FRC";
+
+    }, []);
     const sponsorshipLevels = [
         {
             name: "Diamond",

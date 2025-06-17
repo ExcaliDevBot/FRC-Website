@@ -34,7 +34,7 @@ function App() {
                 <Route path="/privacy" element={<PrivacyPolicy/>}/>
                 <Route path="/resources" element={<Resources/>}/>
                 <Route path="/robots" element={<Robots/>}/>
-                <Route path="/sponsors-us" element={<SponsorUs/>}/>
+                <Route path="/sponsor-us" element={<SponsorUs/>}/>
                 <Route path="/login" element={<LoginPage/>}/>
                 <Route path="/dashboard" element={<Dashboard/>}/>
                 <Route path="/community-points" element={<QuestionnairePage/>}/>

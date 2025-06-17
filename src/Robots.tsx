@@ -11,8 +11,12 @@ import {
     Hexagon,
     Feather
 } from 'lucide-react';
+import {useEffect} from "react";
 
 function Robots() {
+      useEffect(() => {
+        document.title = "Robots | Excalibur FRC";
+    }, []);
     const robots = [
         {
             year: 2025,

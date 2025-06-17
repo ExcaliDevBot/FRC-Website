@@ -1,6 +1,11 @@
-import {Code, Zap, Users, Wrench, Target, Camera} from 'lucide-react';
+import {useEffect} from 'react';
+import {Code, Zap, Wrench, Target, Camera, GraduationCap,Users} from 'lucide-react';
 
 function TeamPage() {
+    useEffect(() => {
+        document.title = "The Team | Excalibur FRC";
+    }, []);
+
     const mentors = [
         {name: "Eitan Cohen", role: "Lead Mentor", expertise: "Team Management"},
         {name: "Elad Ben Shlomo", role: "Electrical Mentor", expertise: "Co-Lead Mentor and Electrical design"},
@@ -23,12 +28,11 @@ function TeamPage() {
     const teamMembers = [
         "Uri Feist", "Itamar Cohen Elias", "Itamar Morgenshtein", "Eitan Berman", "Eitan Gottlieb", "Eliyah Ben Lulu", "Eliyah Kalphon",
         "Elad Cohen", "Elad Shayer", "Gilad Keller", "Ze'ev Yisrael Simons", "Yair Levi", "Yaer Nayot", "Yonatan Ben Shlomo", "Yishai Greenfeld",
-    "Yishai Levran", "Malachi Tzadok", "Nadav Yurman", "Nadav Philipson", "Noam Novoslevsky", "Netanel Ekshtein", "Ezra Nagar",
-    "Azriel Saar", "Amichai Sedley",  "Roi Hadad", "Ramiel Waldoks", "Shalev Levin", "Nadav Amiel", "Ariel Friedman",
-    "Naveh Naftali", "Eliyav Shapira", "Yair Edri", "Yiftach Stossel", "Shachar Rozewitz", "Matan Keller", "Yedidya Berdugo",
-    "Ori Siminovsky", "Eitan Kreiger", "Ariel Lipsker", "Asif Leshem", "Ariel Bergson", "Naveh Yeshpe"
-];
-
+        "Yishai Levran", "Malachi Tzadok", "Nadav Yurman", "Nadav Philipson", "Noam Novoslevsky", "Netanel Ekshtein", "Ezra Nagar",
+        "Azriel Saar", "Amichai Sedley", "Roi Hadad", "Ramiel Waldoks", "Shalev Levin", "Nadav Amiel", "Ariel Friedman",
+        "Naveh Naftali", "Eliyav Shapira", "Yair Edri", "Yiftach Stossel", "Shachar Rozewitz", "Matan Keller", "Yedidya Berdugo",
+        "Ori Siminovsky", "Eitan Kreiger", "Ariel Lipsker", "Asif Leshem", "Ariel Bergson", "Naveh Yeshpe"
+    ];
 
     const subteams = [
         {
@@ -48,7 +52,7 @@ function TeamPage() {
     ];
 
     const alumni = [
-        {name: "Asaf Kloot", class: "2025", role: "Software Lead"},
+        {name: "Asaf Kloot", class: "2025", role: "Captain"},
         {name: "Yoav Cohen", class: "2025", role: "Software Lead"},
         {name: "Itay Keller", class: "2025", role: "Localization Lead"},
         {name: "Omer Familia", class: "2025", role: "Electrical Team Member"},
@@ -58,13 +62,15 @@ function TeamPage() {
         {name: "Roi Eliad", class: "2025", role: "Mechanical Team Member"},
         {name: "Yonah Goldberg", class: "2025", role: "Community Team Member"},
         {name: "Maor Patt", class: "2025", role: "Electrical Team Member"},
-        {name: "Aviad Reingold", class: "2024", role: "Captian"},
+        {name: "Aviad Reingold", class: "2024", role: "Captain"},
         {name: "Shai Grossman", class: "2024", role: "Software Lead"},
         {name: "Eitan Barth", class: "2024", role: "Electrical Lead"},
         {name: "Elad Ben Shlomo", class: "2024", role: "Electrical Team Member"},
         {name: "Ori Gantz", class: "2024", role: "CAD Lead"},
         {name: "Liam Cohen", class: "2024", role: "Media Lead"},
     ];
+
+
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
@@ -85,16 +91,6 @@ function TeamPage() {
                                 A diverse group of passionate students and mentors working together to
                                 for robotics and engineering excellence, and also for Good Times:)
                             </p>
-                            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
-                                <button
-                                    className="bg-team-gold text-team-blue px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-opacity-90 transition text-lg">
-                                    Join Our Team
-                                </button>
-                                <button
-                                    className="border-2 border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-team-blue transition text-lg">
-                                    Learn More
-                                </button>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,7 +153,10 @@ function TeamPage() {
             {/* Alumni Section */}
             <div className="py-12 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-team-blue text-center mb-8">Our Alumni</h2>
+                    <h2 className="text-3xl font-bold text-team-blue text-center mb-8 flex items-center justify-center space-x-3">
+                        <GraduationCap className="h-8 w-8 text-team-blue"/>
+                        <span>Our Alumni</span>
+                    </h2>
                     {Object.entries(
                         alumni.reduce((groups, alum) => {
                             groups[alum.class] = groups[alum.class] || [];
@@ -167,10 +166,10 @@ function TeamPage() {
                     )
                         .sort(([yearA], [yearB]) => parseInt(yearB) - parseInt(yearA)) // Sort years in descending order
                         .map(([year, alumniGroup]) => (
-                            <div key={year} className="mb-8 ">
+                            <div key={year} className="mb-8">
                                 <h3 className="text-xl font-semibold text-gray-600 mb-4">Class of {year}</h3>
                                 <div
-                                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-gray-300 p-4 rounded-lg">
+                                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 bg-gray-300 p-4 rounded-lg">
                                     {alumniGroup.map((alum, index) => (
                                         <div key={index} className="text-team-blue text-center">
                                             <h4 className="text-lg font-medium italic">{alum.name}</h4>

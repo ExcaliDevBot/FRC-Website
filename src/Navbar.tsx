@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
                         Resources
                     </Link>
                     <Link
-                        to="/sponsors-us"
+                        to="/sponsor-us"
                         className="bg-team-blue text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition"
                     >
                         Sponsor Us
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
                         </motion.div>
                         <motion.div variants={linkVariants}>
                             <Link
-                                to="/sponsors-us"
+                                to="/sponsor-us"
                                 className="bg-team-gold text-team-blue px-8 py-4 rounded-lg hover:bg-opacity-90 transition text-2xl"
                                 onClick={toggleNav}
                             >

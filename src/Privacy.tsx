@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Lock, Shield, Eye, Database } from 'lucide-react';
 
 function PrivacyPolicy() {
+    useEffect(() => {
+        document.title = "Privacy Policy | Excalibur FRC";
+    }, []);
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="relative bg-team-blue py-16">
@@ -79,9 +82,9 @@ function PrivacyPolicy() {
             <p className="text-gray-600 mb-4">
               If you have any questions about this Privacy Policy, please contact us at:
               <br />
-              Email: privacy@teamexcalibur.com
+              Email: excaliburfrc@gmail.com
               <br />
-              Address: [Your Address]
+              Address: Reuven 4, Modi'in, Israel
             </p>
           </div>
         </div>
