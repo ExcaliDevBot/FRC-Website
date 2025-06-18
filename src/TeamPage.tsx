@@ -22,6 +22,7 @@ function TeamPage() {
         {name: "Eylon Ben Shushan", role: "Electrical Lead"},
         {name: "Itamar Dudai", role: "Community Lead"},
         {name: "Amichai Sedley", role: "Media Lead"},
+        {name: "Elad Shayer", role: "-==-  Fun Dictator  -==-"},
         {name: "Chagai Rosen", role: "Resources Lead"}
     ];
 
@@ -58,12 +59,12 @@ function TeamPage() {
         {name: "Yinon Strauss", class: "2025", role: "Electrical Team Member / מלווה מוסדות"},
         {name: "Omer Familia", class: "2025", role: "Electrical Team Member"},
         {name: "Asaf Hershkop", class: "2025", role: "Software Team Member"},
-        {name: "Nehorai Berdugo", class: "2025", role: "Mechanical Team Member / א' הוואי ובידור "},
+        {name: "Nehorai Berdugo", class: "2025", role: "Mechanical Team Member / א' הווי ובידור "},
         {name: "Ziv Magen", class: "2025", role: "CAD Team Member / שחקן אנושי"},
         {name: "Roi Eliad", class: "2025", role: "Mechanical Team Member"},
         {name: "Yonah Goldberg", class: "2025", role: "Community Team Member"},
         {name: "Maor Patt", class: "2025", role: "Electrical Team Member"},
-        {name: "Aviad Reingold", class: "2024", role: "Captain"},
+        {name: "Aviad Reingold", class: "2024", role: "Captain / א' הווי ובידור"},
         {name: "Shai Grossman", class: "2024", role: "Software Lead / נהג מרכב"},
         {name: "Eitan Barth", class: "2024", role: "Electrical Lead"},
         {name: "Elad Ben Shlomo", class: "2024", role: "Electrical Team Member"},
