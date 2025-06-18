@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Clock, Users, Award, CheckCircle, AlertCircle} from "lucide-react";
+import {Clock, Users, Award, CheckCircle, AlertCircle, SwordIcon} from "lucide-react";
 import {ref, set, get} from "firebase/database";
 import {db} from "./utils/firebaseConfig";
 
@@ -23,6 +23,10 @@ const projects = [
     {
         name: "התנדבות במרכז אקי\"ם",
         icon: <Users className="w-5 h-5"/>, // Users icon for community involvement
+    },
+    {
+        name: " חרב של מדע",
+        icon: <SwordIcon className="w-5 h-5"/>, // Users icon for community involvement
     },
     {
         name: "הרצאות מדע וטכנולוגיה",

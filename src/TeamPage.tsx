@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import {Code, Zap, Wrench, Target, Camera, GraduationCap,Users} from 'lucide-react';
+import {Code, Zap, Wrench, Target, Camera, GraduationCap, Users} from 'lucide-react';
 
 function TeamPage() {
     useEffect(() => {
