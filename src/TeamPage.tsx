@@ -28,7 +28,7 @@ function TeamPage() {
 
     const teamMembers = [
         "Uri Feist", "Itamar Cohen Elias", "Itamar Morgenshtein", "Eitan Berman", "Eitan Gottlieb", "Eliyah Ben Lulu", "Eliyah Kalphon",
-        "Elad Cohen", "Elad Shayer", "Gilad Keller", "Ze'ev Yisrael Simons", "Yair Levi", "Yaer Nayot", "Yonatan Ben Shlomo", "Yishai Greenfeld",
+        "Elad Cohen", "Gilad Keller", "Ze'ev Yisrael Simons", "Yair Levi", "Yaer Nayot", "Yonatan Ben Shlomo", "Yishai Greenfeld",
         "Yishai Levran", "Malachi Tzadok", "Nadav Yurman", "Nadav Philipson", "Noam Novoslevsky", "Netanel Ekshtein", "Ezra Nagar",
         "Azriel Saar", "Amichai Sedley", "Roi Hadad", "Ramiel Waldoks", "Shalev Levin", "Nadav Amiel", "Ariel Friedman",
         "Naveh Naftali", "Eliyav Shapira", "Yair Edri", "Yiftach Stossel", "Shachar Rozewitz", "Matan Keller", "Yedidya Berdugo",
