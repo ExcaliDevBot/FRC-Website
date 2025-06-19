@@ -22,7 +22,7 @@ function TeamPage() {
         {name: "Eylon Ben Shushan", role: "Electrical Lead"},
         {name: "Itamar Dudai", role: "Community Lead"},
         {name: "Amichai Sedley", role: "Media Lead"},
-        {name: "Elad Shayer", role: "-==-  Fun Dictator  -==-"},
+        {name: "Elad Schajer", role: "-==-  Fun Dictator  -==-"},
         {name: "Chagai Rosen", role: "Resources Lead"}
     ];
 
