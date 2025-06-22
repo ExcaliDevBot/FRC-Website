@@ -61,6 +61,26 @@ const projects = [
         icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
     },
     {
+        name: " חרב של כיף",
+        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+    },
+    {
+        name: "יום SPARK",
+        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+    },
+    {
+        name: "קורס מידול",
+        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+    },
+    {
+        name: "קייטנת תשעת הימים",
+        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+    },
+    {
+        name: "חרב של שגרה",
+        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+    },
+    {
         name: " מנטור קבוצות FLL",
         icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
     },
@@ -69,11 +89,19 @@ const projects = [
         icon: <CheckCircle className="w-5 h-5"/>, // CheckCircle icon for mentoring
     },
     {
+        name: "ExcaLIB | a WpilibJ Control Library",
+        icon: <CheckCircle className="w-5 h-5"/>, // CheckCircle icon for mentoring
+    },
+    {
         name: "קייטנת רובוטיקה | בית ספר אריאל",
         icon: <Clock className="w-5 h-5"/>, // Clock icon for robotics camps
     },
     {
         name: "קייטנת רובוטיקה | משואות נריה",
+        icon: <Clock className="w-5 h-5"/>, // Clock icon for robotics camps
+    },
+    {
+        name: "קייטנת רובוטיקה | בית חורון",
         icon: <Clock className="w-5 h-5"/>, // Clock icon for robotics camps
     },
     {
