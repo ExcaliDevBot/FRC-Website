@@ -1,5 +1,11 @@
 import React, {useState} from "react";
-import {Clock, Users, Award, CheckCircle, AlertCircle, SwordIcon} from "lucide-react";
+import {Clock, Users, CheckCircle, AlertCircle} from "lucide-react";
+import { FaRocket, FaLeaf, FaRobot, FaUserAstronaut, FaFireAlt } from 'react-icons/fa';
+import { MdScience, MdSchool, MdEmojiObjects, MdOutlineTravelExplore, MdOutlineGroups } from 'react-icons/md';
+import { BiAtom, BiBrain, BiCodeAlt, BiJoystick } from 'react-icons/bi';
+import { AiFillExperiment, AiOutlineRobot, AiTwotoneTool, AiFillTrophy } from 'react-icons/ai';
+import { RiLightbulbFlashLine, RiTeamLine, RiPlanetLine, RiRadarLine, RiEmotionHappyLine, RiHandHeartLine, RiMacLine } from 'react-icons/ri';
+
 import {ref, set, get} from "firebase/database";
 import {db} from "./utils/firebaseConfig";
 
@@ -18,102 +24,105 @@ const names = [
 const projects = [
     {
         name: "ביציקופטר + מדעני העתיד",
-        icon: <Award className="w-5 h-5"/>, // Award icon for achievements
+        icon: <FaRocket className="w-5 h-5"/>,
     },
     {
         name: "התנדבות במרכז אקי\"ם",
-        icon: <Users className="w-5 h-5"/>, // Users icon for community involvement
+        icon: <FaLeaf className="w-5 h-5"/>,
     },
     {
         name: " חרב של מדע",
-        icon: <SwordIcon className="w-5 h-5"/>, // Users icon for community involvement
+        icon: <FaRobot className="w-5 h-5"/>,
     },
     {
         name: "הרצאות מדע וטכנולוגיה",
-        icon: <Clock className="w-5 h-5"/>, // Clock icon for time-based activities
+        icon: <FaUserAstronaut className="w-5 h-5"/>,
     },
     {
         name: "סדנאות AI ליסודי",
-        icon: <Award className="w-5 h-5"/>, // Award icon for educational workshops
+        icon: <FaFireAlt className="w-5 h-5"/>,
     },
     {
         name: "STEM לגנים",
-        icon: <CheckCircle className="w-5 h-5"/>, // CheckCircle icon for verified STEM activities
+        icon: <MdScience className="w-5 h-5"/>,
     },
     {
         name: "יריד קיימות",
-        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for sustainability awareness
+        icon: <MdSchool className="w-5 h-5"/>,
     },
     {
         name: "ExcaliWEB",
-        icon: <Clock className="w-5 h-5"/>, // Clock icon for web-related projects
+        icon: <MdEmojiObjects className="w-5 h-5"/>,
     },
     {
         name: "תחרויות הבבאדע השנתיות",
-        icon: <Award className="w-5 h-5"/>, // Award icon for competitions
+        icon: <MdOutlineTravelExplore className="w-5 h-5"/>,
     },
     {
         name: "קייטנת תשעת הימים",
-        icon: <Users className="w-5 h-5"/>, // Users icon for group activities
+        icon: <MdOutlineGroups className="w-5 h-5"/>,
     },
     {
         name: "פסטיבל רואים אחרת",
-        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+        icon: <BiAtom className="w-5 h-5"/>,
     },
     {
         name: " חרב של כיף",
-        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+        icon: <BiBrain className="w-5 h-5"/>,
     },
     {
-        name: "יום SPARK",
-        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+        name: " חרב של עצמה",
+        icon: <BiCodeAlt className="w-5 h-5"/>,
+    },
+    {
+        name: "יום ספארק",
+        icon: <BiJoystick className="w-5 h-5"/>,
     },
     {
         name: "קורס מידול",
-        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+        icon: <AiFillExperiment className="w-5 h-5"/>,
     },
     {
         name: "קייטנת תשעת הימים",
-        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+        icon: <AiOutlineRobot className="w-5 h-5"/>,
     },
     {
         name: "חרב של שגרה",
-        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+        icon: <AiTwotoneTool className="w-5 h-5"/>,
     },
     {
         name: " מנטור קבוצות FLL",
-        icon: <AlertCircle className="w-5 h-5"/>, // AlertCircle icon for awareness events
+        icon: <AiFillTrophy className="w-5 h-5"/>,
     },
     {
         name: "מנטור קבוצות FLL חרדיות",
-        icon: <CheckCircle className="w-5 h-5"/>, // CheckCircle icon for mentoring
+        icon: <RiLightbulbFlashLine className="w-5 h-5"/>,
     },
     {
         name: "ExcaLIB | a WpilibJ Control Library",
-        icon: <CheckCircle className="w-5 h-5"/>, // CheckCircle icon for mentoring
+        icon: <RiTeamLine className="w-5 h-5"/>,
     },
     {
         name: "קייטנת רובוטיקה | בית ספר אריאל",
-        icon: <Clock className="w-5 h-5"/>, // Clock icon for robotics camps
+        icon: <RiPlanetLine className="w-5 h-5"/>,
     },
     {
         name: "קייטנת רובוטיקה | משואות נריה",
-        icon: <Clock className="w-5 h-5"/>, // Clock icon for robotics camps
+        icon: <RiRadarLine className="w-5 h-5"/>,
     },
     {
         name: "קייטנת רובוטיקה | בית חורון",
-        icon: <Clock className="w-5 h-5"/>, // Clock icon for robotics camps
+        icon: <RiEmotionHappyLine className="w-5 h-5"/>,
     },
     {
         name: "ExcaliAcademy",
-        icon: <Award className="w-5 h-5"/>, // Award icon for educational programs
+        icon: <RiHandHeartLine className="w-5 h-5"/>,
     },
     {
         name: "קורס מנטורים",
-        icon: <CheckCircle className="w-5 h-5"/>, // CheckCircle icon for mentor training
+        icon: <RiMacLine className="w-5 h-5"/>,
     },
 ];
-
 const QuestionnairePage: React.FC = () => {
         const [formData, setFormData] = useState({
             name: "",
