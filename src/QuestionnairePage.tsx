@@ -27,6 +27,10 @@ const projects = [
         icon: <FaRocket className="w-5 h-5"/>,
     },
     {
+        name: "קורס ג'אווה ופייטון",
+        icon: <FaRocket className="w-5 h-5"/>,
+    },
+    {
         name: "התנדבות במרכז אקי\"ם",
         icon: <FaLeaf className="w-5 h-5"/>,
     },
