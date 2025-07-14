@@ -32,7 +32,7 @@ function TeamPage() {
         "Yishai Levran", "Malachi Tzadok", "Nadav Yurman", "Nadav Philipson", "Noam Novoslevsky", "Netanel Ekshtein", "Ezra Nagar",
         "Azriel Saar", "Amichai Sedley", "Roi Hadad", "Ramiel Waldoks", "Shalev Levin", "Nadav Amiel", "Ariel Friedman",
         "Naveh Naftali", "Eliyav Shapira", "Yair Edri", "Yiftach Stossel", "Shachar Rozewitz", "Matan Keller", "Yedidya Berdugo",
-        "Ori Siminovsky", "Eitan Kreiger", "Ariel Lipsker", "Asif Leshem", "Ariel Bergson", "Naveh Yeshpe"
+        "Ori Siminovsky", "Eitan Kreiger", "Ariel Lipsker", "Asif Leshem", "Ariel Bergson", "Naveh Yeshpe", "Nevo Shifman"
     ];
 
     const subteams = [
