@@ -79,6 +79,10 @@ const projects = [
         icon: <BiCodeAlt className="w-5 h-5"/>,
     },
     {
+        name: "STEM לגנים",
+        icon: <BiCodeAlt className="w-5 h-5"/>,
+    },
+    {
         name: "יום ספארק",
         icon: <BiJoystick className="w-5 h-5"/>,
     },
@@ -91,7 +95,7 @@ const projects = [
         icon: <AiOutlineRobot className="w-5 h-5"/>,
     },
     {
-        name: "חרב של שגרה",
+        name: "חרב של חוסן",
         icon: <AiTwotoneTool className="w-5 h-5"/>,
     },
     {
