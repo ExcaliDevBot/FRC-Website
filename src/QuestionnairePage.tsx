@@ -79,7 +79,7 @@ const projects = [
         icon: <BiCodeAlt className="w-5 h-5"/>,
     },
     {
-        name: "STEM לגנים",
+        name: "STEM לגינות",
         icon: <BiCodeAlt className="w-5 h-5"/>,
     },
     {
