@@ -71,6 +71,10 @@ const projects = [
         icon: <BiAtom className="w-5 h-5"/>,
     },
     {
+        name: "פסטיבל סביבה",
+        icon: <BiAtom className="w-5 h-5"/>,
+    },
+    {
         name: " חרב של כיף",
         icon: <BiBrain className="w-5 h-5"/>,
     },
