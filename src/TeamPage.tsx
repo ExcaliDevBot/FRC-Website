@@ -27,9 +27,9 @@ function TeamPage() {
     ];
 
     const teamMembers = [
-        "Uri Feist", "Itamar Cohen Elias", "Itamar Morgenshtein", "Eitan Gottlieb", "Eliyah Ben Lulu", "Eliya Kalfon"
+        "Uri Feist", "Itamar Morgenshtein", "Eitan Gottlieb", "Eliyah Ben Lulu", "Eliya Kalfon"
         , "Gilad Keller", "Ze'ev Yisrael Simons", "Yair Levi", "Yaer Nayot", "Yonatan Ben Shlomo", "Yishai Greenfeld",
-        "Yishai Levran", "Malachi Tzadok", "Nadav Yurman", "Nadav Philipson", "Noam Novoslevsky", "Netanel Ekshtein", "Ezra Nagar",
+        "Yishai Levran", "Nadav Yurman", "Nadav Philipson", "Noam Novoslevsky", "Netanel Ekshtein", "Ezra Nagar",
         "Azriel Saar", "Amichai Sedley", "Roi Hadad", "Ramiel Waldoks", "Shalev Levin", "Nadav Amiel", "Ariel Friedman",
         "Naveh Naftali", "Eliyav Shapira", "Yair Edri", "Yiftach Stossel", "Shachar Rozewitz", "Matan Keller", "Yedidya Berdugo",
         "Ori Siminovsky", "Eitan Kreiger", "Ariel Lipsker", "Asif Leshem", "Ariel Bergson", "Naveh Yeshpe", "Nevo Shifman"
@@ -71,10 +71,30 @@ function TeamPage() {
         {name: "Ori Gantz", class: "2024", role: "CAD Lead"},
         {name: "Ori Hazani", class: "2024", role: "Manufacturing Lead"},
         {name: "Liam Cohen", class: "2024", role: "Media Lead"},
+        {name: "Michal Eliad", class: "2023", role: "Captain"},
+        {name: "Itay Greenberger", class: "2023", role: "Mechanical Lead"},
+        {name: "Yonatan Batat", class: "2023", role: "Electrical Lead"},
+        {name: "Amit Grossberger", class: "2023", role: "Strategy Lead"},
+        {name: "Tomer Ayash", class: "2023", role: "Mechanical Team Member"},
+        {name: "Eyal Avraham", class: "2023", role: "Mechanical Team Member"},
+        {name: "Eliyakim Kahanah", class: "2023", role: "Mechanical Team Member"},
+        {name: "Maoz Penigstein", class: "2023", role: "Mechanical Team Member"},
+        {name: "Nadav Siminovski", class: "2023", role: "Manufacturing Team Member"},
+        {name: "Noam Snir", class: "2022", role: "Mechanical Team Member"},
+        {name: "Hadar Visel", class: "2022", role: "Mechanical Team Member"},
+        {name: "Yotam Shlomi", class: "2022", role: "Software Lead"},
+        {name: "Yair Greenfeld", class: "2022", role: "Mechanical Lead"},
         {name: "Nitai Ben Shimol", class: "2018", role: "Captain"},
-        {name: "Asaf Wolkinson", class: "2021", role: "Media Lead / בוגר מלווה"},
+        {name: "Asaf Wolkinson", class: "2021", role: "Media Lead"},
         {name: "Shahar Paderski ", class: "2023", role: "Software Team Member"},
-        {name: "Eitan Cohen ", class: "2021", role: "Strategy Lead / מנטור ראשי "},
+        {name: "Eitan Cohen ", class: "2021", role: "Strategy Lead"},
+        {name: "Ariel Korngut ", class: "2021", role: "Captain"},
+        {name: "Yaron Reznik ", class: "2021", role: "Captain"},
+        {name: "Nave Peled ", class: "2021", role: "Electrical Lead"},
+        {name: "Itamar Reinman ", class: "2021", role: "Strategy Lead"},
+        {name: "Amit Akerman", class: "2021", role: "Software Lead"},
+        {name: "Gil Izdopher ", class: "2021", role: "Mechanical Team Member"},
+        {name: "Roi Sucher ", class: "2021", role: "Mechanical Team Member"},
     ];
 
 
