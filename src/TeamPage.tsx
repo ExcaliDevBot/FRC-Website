@@ -16,19 +16,19 @@ function TeamPage() {
 
     const leadership = [
         {name: "Amit Sucher", role: "Captain"},
-        {name: "Ori Korngt", role: "co - Captain"},
+        {name: "Ori Korngut", role: "co-Captain"},
         {name: "Yehuda Rothstein", role: "Software Lead"},
-        {name: "Roi Duvdevani", role: "Mechanical Lead"},
+        {name: "Elad Schajer", role: "Mechanical Lead"},
         {name: "Eylon Ben Shushan", role: "Electrical Lead"},
         {name: "Itamar Dudai", role: "Community Lead"},
         {name: "Amichai Sedley", role: "Media Lead"},
-        {name: "Elad Schajer", role: "-==-  Fun Dictator  -==-"},
+        {name: "Elad Cohen", role: "Strategy Lead"},
         {name: "Chagai Rosen", role: "Resources Lead"}
     ];
 
     const teamMembers = [
-        "Uri Feist", "Itamar Cohen Elias", "Itamar Morgenshtein", "Eitan Berman", "Eitan Gottlieb", "Eliyah Ben Lulu", "Eliya Kalfon",
-        "Elad Cohen", "Gilad Keller", "Ze'ev Yisrael Simons", "Yair Levi", "Yaer Nayot", "Yonatan Ben Shlomo", "Yishai Greenfeld",
+        "Uri Feist", "Itamar Cohen Elias", "Itamar Morgenshtein", "Eitan Berman", "Eitan Gottlieb", "Eliyah Ben Lulu", "Eliya Kalfon"
+        , "Gilad Keller", "Ze'ev Yisrael Simons", "Yair Levi", "Yaer Nayot", "Yonatan Ben Shlomo", "Yishai Greenfeld",
         "Yishai Levran", "Malachi Tzadok", "Nadav Yurman", "Nadav Philipson", "Noam Novoslevsky", "Netanel Ekshtein", "Ezra Nagar",
         "Azriel Saar", "Amichai Sedley", "Roi Hadad", "Ramiel Waldoks", "Shalev Levin", "Nadav Amiel", "Ariel Friedman",
         "Naveh Naftali", "Eliyav Shapira", "Yair Edri", "Yiftach Stossel", "Shachar Rozewitz", "Matan Keller", "Yedidya Berdugo",
