@@ -1,5 +1,5 @@
-import {useEffect} from 'react';
-import {Code, Zap, Wrench, Target, Camera, GraduationCap, Users} from 'lucide-react';
+import { useEffect } from 'react';
+import { Code, Zap, Wrench, Target, Camera, GraduationCap, Users } from 'lucide-react';
 
 function TeamPage() {
     useEffect(() => {
@@ -8,9 +8,13 @@ function TeamPage() {
 
     const mentors = [
         {name: "Eitan Cohen", role: "Lead Mentor", expertise: "Team Management"},
-        {name: "Elad Ben Shlomo", role: "Electrical Mentor", expertise: "Co-Lead Mentor and Electrical design"},
-        {name: "Amit Grossberger", role: "FLL Supervisior", expertise: "Logistics and Supervisor"},
+        {name: "Elad Ben Shlomo", role: "Co Lead Mentor", expertise: "Co-Lead Mentor and Electrical design"},
+        {name: "Asaf Wolkinson", role: "Media Mentor", expertise: "Video and Editing"},
+        {name: "Amit Grossberger", role: "FLL Head Supervisior", expertise: "Logistics and Supervisor"},
         {name: "Yaron Reznik", role: "Mechanical and CAD Mentor", expertise: "Mechanical Engineering"},
+        {name: "Itai Grrenberger", role: "Mechanical Design", expertise: "Mechanical Engineering"},
+        {name: "Hadar Wisel", role: "CAD Mentor ", expertise: "Mechanical Engineering"},
+        {name: "Ori Hazani", role: "Manufacturing Mentor ", expertise: "Mechanical Engineering"},
         {name: "Ariel Korngut", role: "Strategy Mentor ", expertise: "Strategic Planning and Game Analysis"}
     ];
 
@@ -99,59 +103,73 @@ function TeamPage() {
 
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <div className="relative h-[80vh] bg-team-blue overflow-hidden">
+            <div className="relative h-[70vh] md:h-[80vh] bg-team-blue overflow-hidden">
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 bg-gradient-to-r from-team-blue to-blue-900 opacity-90"></div>
                     <div
                         className="absolute inset-0 bg-[url('img/DCMP-EI.jpg')] bg-fixed bg-center mix-blend-overlay"></div>
+                    <div
+                        className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(212,175,55,0.12),transparent_60%)]"/>
                 </div>
-                <div className="relative h-full flex items-center">
-                    <div className="container mx-auto px-4">
-                        <div className="max-w-4xl text-center md:text-left">
-                            <h1 className="text-4xl md:text-7xl font-bold text-white mb-4 md:mb-8">
-                                Meet Our Team
-                                <span className="text-team-gold block mt-4 md:mt-6">The People Behind Excalibur</span>
-                            </h1>
-                            <p className="text-lg md:text-2xl text-gray-200 leading-relaxed mb-6 md:mb-12 max-w-3xl mx-auto md:mx-0">
-                                A diverse group of passionate students and mentors working together to
-                                for robotics and engineering excellence, and also for Good Times:)
-                            </p>
-                        </div>
-                    </div>
+                <div
+                    className="relative h-full flex flex-col justify-center items-center text-center md:text-left px-4 md:px-0">
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 md:mb-6 relative">
+                        Meet Our Team
+                        <span className="text-team-gold block mt-3 md:mt-4 text-2xl md:text-3xl font-semibold">
+                            The people behind Excalibur
+                        </span>
+                        <span
+                            className="absolute top-0 right-4 md:right-12 text-sm md:text-base px-3 py-1 rounded-full bg-team-gold/20 text-team-gold font-bold shadow-md">
+                            10 Years
+                        </span>
+                    </h1>
+                    <p className="text-lg md:text-2xl text-gray-200 leading-relaxed max-w-3xl">
+                        A diverse group of students and mentors building robots, learning together, and having fun.
+                    </p>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0">
+                    <svg viewBox="0 0 1440 80" fill="none" className="w-full h-auto">
+                        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="rgb(249 250 251)"/>
+                    </svg>
                 </div>
             </div>
 
             {/* Leadership Section */}
-            <div className="py-12 bg-white">
+            <div className="py-16 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-center mb-8">Leadership Team</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
+                    <h2 className="text-3xl font-bold text-center mb-10 text-slate-800">Leadership Team</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {leadership.map((leader, index) => (
-                            <div
-                                key={index}
-                                className={`flex flex-col items-center p-4 border rounded-lg ${
-                                    index === leadership.length - 1 ? 'lg:col-start-3' : ''
-                                }`}
-                            >
-                                <h3 className="text-lg font-semibold mb-1">{leader.name}</h3>
-                                <p className="text-gray-600">{leader.role}</p>
+                            <div key={index}
+                                 className="relative overflow-hidden bg-gray-100 border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all hover:scale-105">
+                                <div className="flex items-center gap-4">
+                                    <div
+                                        className="w-12 h-12 rounded-full bg-team-blue/10 flex items-center justify-center text-team-blue font-bold">
+                                        {leader.name.split(' ').map(s => s[0]).slice(0, 2).join('')}
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-slate-800">{leader.name}</h3>
+                                        <p className="text-slate-600">{leader.role}</p>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
 
-
-            {/* Team Members Section */}
-            <div className="py-24">
+            {/* Team Members */}
+            <div className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-4xl font-bold text-team-blue text-center mb-16">Team Members</h2>
-                    <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
+                    <h2 className="text-3xl font-bold text-slate-800 text-center mb-6">Team Members</h2>
+                    <p className="text-center text-slate-600 max-w-2xl mx-auto mb-8">Our full team — students across
+                        roles and years. Click a name to learn more (coming soon).</p>
+                    <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
                         {teamMembers.map((member, index) => (
                             <div key={index}
-                                 className="bg-gradient-to-br from-team-blue to-blue-900 text-white px-6 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                                 className="bg-gray-100 border border-gray-200 text-slate-800 px-5 py-2 rounded-full shadow-sm hover:border-team-gold/60 hover:shadow-md transition-all cursor-pointer">
                                 <p className="text-sm font-medium">{member}</p>
                             </div>
                         ))}
@@ -159,71 +177,67 @@ function TeamPage() {
                 </div>
             </div>
 
-
             {/* Mentors Section */}
-            <div className="py-24 bg-gray-50">
+            <div className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-4xl font-bold text-team-blue text-center mb-16">Our Mentors</h2>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <h2 className="text-3xl font-bold text-slate-800 text-center mb-12">Our Mentors</h2>
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
                         {mentors.map((mentor, index) => (
                             <div key={index}
-                                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                                <h3 className="text-xl font-semibold text-team-blue mb-3">{mentor.name}</h3>
-                                <p className="text-team-gold font-medium mb-2">{mentor.role}</p>
-                                <p className="text-gray-600">{mentor.expertise}</p>
+                                 className="group bg-gray-100 p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow hover:scale-105">
+                                <h3 className="text-lg font-semibold text-slate-800 mb-1">{mentor.name}</h3>
+                                <p className="text-team-gold font-medium mb-1">{mentor.role}</p>
+                                <p className="text-slate-600">{mentor.expertise}</p>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
 
-            {/* Alumni Section */}
+            {/* Full Roster */}
             <div className="py-12 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold text-team-blue text-center mb-8 flex items-center justify-center space-x-3">
-                        <GraduationCap className="h-8 w-8 text-team-blue"/>
-                        <span>Our Alumni</span>
+                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-6 flex items-center justify-center gap-3">
+                        <GraduationCap className="h-7 w-7 text-slate-800"/>
+                        <span>Full Roster</span>
                     </h2>
-                    {Object.entries(
-                        alumni.reduce((groups, alum) => {
-                            groups[alum.class] = groups[alum.class] || [];
-                            groups[alum.class].push(alum);
-                            return groups;
-                        }, {} as Record<string, typeof alumni>)
-                    )
-                        .sort(([yearA], [yearB]) => parseInt(yearB) - parseInt(yearA)) // Sort years in descending order
-                        .map(([year, alumniGroup]) => (
-                            <div key={year} className="mb-8">
-                                <h3 className="text-xl font-semibold text-gray-600 mb-4">Class of {year}</h3>
-                                <div
-                                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 bg-gray-300 p-4 rounded-lg">
-                                    {alumniGroup.map((alum, index) => (
-                                        <div key={index} className="text-team-blue text-center">
-                                            <h4 className="text-lg font-medium italic">{alum.name}</h4>
-                                            <p className="text-sm italic">{alum.role}</p>
+                    <div className="max-w-5xl mx-auto">
+                        {(() => {
+                            const set = new Set<string>();
+                            leadership.forEach(l => set.add(l.name));
+                            mentors.forEach(m => set.add(m.name));
+                            teamMembers.forEach(t => set.add(t));
+                            alumni.forEach(a => set.add(a.name));
+                            const roster = Array.from(set).sort((a, b) => a.localeCompare(b));
+                            return (
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                                    {roster.map((person, i) => (
+                                        <div key={i}
+                                             className="bg-gray-100 p-3 rounded-lg shadow-sm text-center border border-gray-200 hover:shadow-md transition">
+                                            <p className="text-sm font-medium text-slate-800">{person}</p>
                                         </div>
                                     ))}
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })()}
+                    </div>
                 </div>
             </div>
 
-
             {/* Subteams Section */}
-            <div className="py-24 bg-gray-50">
+            <div className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-4xl font-bold text-team-blue text-center mb-16">Our Subteams</h2>
-                    <div className="grid md:grid-cols-3 gap-8">
+                    <h2 className="text-3xl font-bold text-slate-800 text-center mb-12">Our Subteams</h2>
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
                         {subteams.map((team, index) => (
                             <div key={index}
-                                 className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                 className="bg-gray-100 p-8 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg transition hover:scale-105">
                                 <div
-                                    className="bg-team-blue/10 rounded-full p-4 w-14 h-14 flex items-center justify-center mb-6">
+                                    className="bg-team-blue/10 rounded-full p-4 w-14 h-14 flex items-center justify-center mb-5">
                                     <div className="text-team-blue">{team.icon}</div>
                                 </div>
-                                <h3 className="text-xl font-semibold text-team-blue mb-3">{team.name}</h3>
-                                <p className="text-gray-600">{team.description}</p>
+                                <h3 className="text-lg font-semibold text-slate-800 mb-2">{team.name}</h3>
+                                <p className="text-slate-600">{team.description}</p>
                             </div>
                         ))}
                     </div>
