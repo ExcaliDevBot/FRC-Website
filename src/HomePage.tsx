@@ -51,6 +51,7 @@ function HomePage() {
         {name: "monday", logo: "img/monday.png", link: "https://www.monday.com"},
         {name: "SolidWorks", logo: "img/SolidWorks.png", link: "https://www.solidworks.com/"},
         {name: "Nvidia", logo: "img/nvidia.jpg", link: "https://www.nvidia.com/en-us/"},
+        {name: "BS&CO", logo: "img/bs&co.jpeg", link: "https://www.nvidia.com/en-us/"},
         {name: "Mashaf", logo: "img/MASHAF.png", link: "https://www.mashaf.co.il/"},
         {name: "Polycryl", logo: "img/POLYCRYL.avif", link: "https://www.polycryl.co.il/"},
         {name: "LCS", logo: "img/LCS.jpg", link: "https://www.global-lcs.com/"},
