@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
                 {/* Logo & Anniversary */}
                 <Link to="/" className="flex items-center gap-3">
                     <img
-                        src="/img/Logo-Transparent.png"
+                        src="/img/excalibur10years-removebg-preview.png"
                         alt="Team Logo"
                         className="h-11 w-11 hover:opacity-90 transition-opacity"
                     />
