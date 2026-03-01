@@ -48,7 +48,7 @@ function Robots() {
             year: 2023,
             name: "Merlin",
             game: "ChargedUp",
-            image: "img/merlin.JPG",
+            image: "img/galahad.png",
             features: [
                 {name: "Smart Arm Control", icon: <Anchor className="h-5 w-5"/>},
                 {name: "Auto-Ramp-Balancing", icon: <Feather className="h-5 w-5"/>},
